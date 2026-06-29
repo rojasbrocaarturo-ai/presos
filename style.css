@@ -1,0 +1,378 @@
+/* ============================================================
+   Salesforce Corporate Slides — HTML Template
+   Colors sourced from theme1.xml
+   Font: Salesforce Sans (via CDN) with Arial fallback
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* Salesforce brand palette */
+:root {
+  --sf-dark:       #000000;
+  --sf-white:      #FFFFFF;
+  --sf-green-dark: #158158;
+  --sf-gray-light: #F3F3F3;
+  --sf-blue:       #058DC7;
+  --sf-green:      #50B432;
+  --sf-orange:     #ED561B;
+  --sf-yellow:     #EDEF00;
+  --sf-cyan:       #24CBE5;
+  --sf-green-lt:   #64E572;
+  --sf-link:       #2200CC;
+
+  --sf-font: 'Salesforce Sans', 'Noto Sans', Arial, sans-serif;
+}
+
+/* ---- Base reset for Reveal ---- */
+.reveal,
+.reveal * {
+  font-family: var(--sf-font);
+  box-sizing: border-box;
+}
+
+.reveal .slides section {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  top: 0 !important;
+  display: flex !important;
+  flex-direction: column;
+}
+
+/* ============================================================
+   TITLE SLIDE A  — dark blue-green background
+   ============================================================ */
+.reveal .sf-title-a {
+  background: linear-gradient(135deg, #032D60 0%, #0070D2 60%, var(--sf-green-dark) 100%);
+  color: var(--sf-white);
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.reveal .sf-title-a::before {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+}
+
+.reveal .sf-title-a::after {
+  content: '';
+  position: absolute;
+  bottom: 60px;
+  right: 100px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+}
+
+.sf-title-content {
+  max-width: 60%;
+  z-index: 1;
+}
+
+.reveal .sf-title-a h1 {
+  font-size: 2.6em;
+  font-weight: 700;
+  color: var(--sf-white);
+  margin: 0 0 16px 0;
+  line-height: 1.15;
+  text-shadow: none;
+  text-transform: none;
+}
+
+.reveal .sf-title-a h2 {
+  font-size: 1.3em;
+  font-weight: 400;
+  color: rgba(255,255,255,0.85);
+  margin: 0 0 48px 0;
+  text-transform: none;
+}
+
+.sf-speaker {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 20px;
+}
+
+.sf-speaker-name {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--sf-white);
+}
+
+.sf-speaker-contact {
+  font-size: 0.75em;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ============================================================
+   SEGUE / SECTION DIVIDER
+   ============================================================ */
+.reveal .sf-segue {
+  background: var(--sf-green-dark);
+  color: var(--sf-white);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px;
+}
+
+.reveal .sf-segue h2 {
+  font-size: 2.4em;
+  font-weight: 700;
+  color: var(--sf-white);
+  margin: 0 0 16px 0;
+  text-transform: none;
+}
+
+.reveal .sf-segue p {
+  font-size: 1.1em;
+  color: rgba(255,255,255,0.8);
+  margin: 0;
+}
+
+/* ============================================================
+   BASIC CONTENT SLIDES
+   ============================================================ */
+.reveal .sf-content {
+  background: var(--sf-white);
+  color: var(--sf-dark);
+  padding: 0;
+  flex-direction: column;
+}
+
+.sf-slide-header {
+  background: #032D60;
+  color: var(--sf-white);
+  padding: 28px 60px 22px;
+  flex-shrink: 0;
+}
+
+.reveal .sf-content .sf-slide-header h3 {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: var(--sf-white);
+  margin: 0 0 4px 0;
+  text-transform: none;
+}
+
+.reveal .sf-content .sf-subtitle {
+  font-size: 0.85em;
+  color: rgba(255,255,255,0.75);
+  margin: 0;
+}
+
+.sf-body {
+  flex: 1;
+  padding: 36px 60px 20px;
+  overflow: hidden;
+}
+
+.reveal .sf-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reveal .sf-content ul li {
+  font-size: 1em;
+  padding: 8px 0 8px 20px;
+  position: relative;
+  color: var(--sf-dark);
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.reveal .sf-content ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sf-blue);
+}
+
+.reveal .sf-content ul ul {
+  margin-top: 8px;
+}
+
+.reveal .sf-content ul ul li {
+  font-size: 0.9em;
+  color: #444;
+  border-bottom: none;
+}
+
+.reveal .sf-content ul ul li::before {
+  background: var(--sf-green-dark);
+  width: 6px;
+  height: 6px;
+}
+
+/* column h4 headings */
+.reveal .sf-content h4 {
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--sf-blue);
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--sf-blue);
+}
+
+/* ---- Two & Three column ---- */
+.sf-columns {
+  display: flex;
+  gap: 40px;
+}
+
+.sf-col {
+  flex: 1;
+}
+
+/* ============================================================
+   VIGNETTE SLIDES — full-bleed background image
+   ============================================================ */
+.reveal .sf-vignette {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--sf-white);
+  padding: 0;
+  position: relative;
+}
+
+.sf-vignette-overlay {
+  flex: 1;
+  background: linear-gradient(to right, rgba(3,45,96,0.88) 45%, rgba(3,45,96,0.1) 100%);
+  display: flex;
+  align-items: center;
+  padding: 50px 60px;
+}
+
+.sf-vignette-content {
+  max-width: 55%;
+}
+
+.reveal .sf-vignette h3 {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: var(--sf-white);
+  margin: 0 0 8px 0;
+  text-transform: none;
+}
+
+.reveal .sf-vignette .sf-subtitle {
+  font-size: 0.85em;
+  color: rgba(255,255,255,0.75);
+  margin: 0 0 20px 0;
+}
+
+.reveal .sf-vignette ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reveal .sf-vignette ul li {
+  font-size: 0.95em;
+  padding: 6px 0 6px 18px;
+  position: relative;
+  color: rgba(255,255,255,0.9);
+}
+
+.reveal .sf-vignette ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--sf-cyan);
+}
+
+/* ============================================================
+   CALLOUT / QUOTE SLIDE
+   ============================================================ */
+.reveal .sf-callout {
+  background: var(--sf-gray-light);
+  color: var(--sf-dark);
+  justify-content: center;
+  align-items: center;
+  padding: 60px 100px;
+  text-align: center;
+}
+
+.reveal .sf-callout blockquote {
+  font-size: 1.5em;
+  font-weight: 600;
+  font-style: italic;
+  color: #032D60;
+  border-left: none;
+  background: none;
+  box-shadow: none;
+  margin: 0 0 24px 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.reveal .sf-callout cite {
+  font-size: 0.85em;
+  color: var(--sf-green-dark);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.sf-footer {
+  background: var(--sf-gray-light);
+  color: #888;
+  font-size: 0.55em;
+  padding: 6px 60px;
+  border-top: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+.sf-footer-light {
+  background: rgba(0,0,0,0.4);
+  color: rgba(255,255,255,0.6);
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+/* ============================================================
+   REVEAL OVERRIDES
+   ============================================================ */
+.reveal .progress {
+  color: var(--sf-blue);
+}
+
+.reveal .controls {
+  color: var(--sf-blue);
+}
+
+.reveal .slide-number {
+  background: rgba(3,45,96,0.7);
+  color: white;
+  font-size: 12px;
+}
+
+/* Ensure no default reveal margins interfere */
+.reveal .slides > section {
+  padding: 0;
+}

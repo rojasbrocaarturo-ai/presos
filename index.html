@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presentation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ============================================================
+           SLIDE TYPE: Title (with characters)
+           ============================================================ -->
+      <section class="sf-title-a">
+        <div class="sf-title-content">
+          <h1>Presentation Title</h1>
+          <h2>Subtitle or tagline goes here</h2>
+          <div class="sf-speaker">
+            <span class="sf-speaker-name">Name, Title</span>
+            <span class="sf-speaker-contact">@handle | email@company.com</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE TYPE: Segue / Section divider
+           ============================================================ -->
+      <section class="sf-segue">
+        <h2>Section Title</h2>
+        <p>Optional subtitle for this section</p>
+      </section>
+
+      <!-- ============================================================
+           SLIDE TYPE: Basic Content — single column
+           ============================================================ -->
+      <section class="sf-content">
+        <div class="sf-slide-header">
+          <h3>Slide Title</h3>
+          <p class="sf-subtitle">Optional subtitle</p>
+        </div>
+        <div class="sf-body">
+          <ul>
+            <li>First level text is set at twenty point Salesforce Sans</li>
+            <li>Second key point goes here</li>
+            <li>Third key point goes here
+              <ul>
+                <li>Sub-point detail</li>
+                <li>Sub-point detail</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="sf-footer">Footer text | Confidential</div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE TYPE: Two Column
+           ============================================================ -->
+      <section class="sf-content sf-two-col">
+        <div class="sf-slide-header">
+          <h3>Two Column Layout</h3>
+          <p class="sf-subtitle">Optional subtitle</p>
+        </div>
+        <div class="sf-body sf-columns">
+          <div class="sf-col">
+            <h4>Column One</h4>
+            <ul>
+              <li>First level text goes here</li>
+              <li>Second point goes here</li>
+              <li>Third point goes here</li>
+            </ul>
+          </div>
+          <div class="sf-col">
+            <h4>Column Two</h4>
+            <ul>
+              <li>First level text goes here</li>
+              <li>Second point goes here</li>
+              <li>Third point goes here</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sf-footer">Footer text | Confidential</div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE TYPE: Three Column
+           ============================================================ -->
+      <section class="sf-content sf-three-col">
+        <div class="sf-slide-header">
+          <h3>Three Column Layout</h3>
+          <p class="sf-subtitle">Optional subtitle</p>
+        </div>
+        <div class="sf-body sf-columns">
+          <div class="sf-col">
+            <h4>Column One</h4>
+            <ul>
+              <li>First level point</li>
+              <li>Second level point</li>
+            </ul>
+          </div>
+          <div class="sf-col">
+            <h4>Column Two</h4>
+            <ul>
+              <li>First level point</li>
+              <li>Second level point</li>
+            </ul>
+          </div>
+          <div class="sf-col">
+            <h4>Column Three</h4>
+            <ul>
+              <li>First level point</li>
+              <li>Second level point</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sf-footer">Footer text | Confidential</div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE TYPE: Vignette — full background image with content
+           Replace assets/image10.jpg with any of the vignette images
+           ============================================================ -->
+      <section class="sf-vignette" style="background-image: url('assets/image10.jpg');">
+        <div class="sf-vignette-overlay">
+          <div class="sf-vignette-content">
+            <h3>Vignette Slide Title</h3>
+            <p class="sf-subtitle">Subtitle placeholder</p>
+            <ul>
+              <li>First level text goes here</li>
+              <li>Second key point goes here</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sf-footer sf-footer-light">Footer text | Confidential</div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE TYPE: Quote / Callout
+           ============================================================ -->
+      <section class="sf-callout">
+        <blockquote>
+          "This is a key quote or callout message that deserves visual emphasis."
+        </blockquote>
+        <cite>— Speaker Name, Title</cite>
+        <div class="sf-footer">Footer text | Confidential</div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE TYPE: Closing / Thank You
+           ============================================================ -->
+      <section class="sf-title-a sf-closing">
+        <div class="sf-title-content">
+          <h1>Thank You</h1>
+          <h2>Questions?</h2>
+          <div class="sf-speaker">
+            <span class="sf-speaker-name">Name, Title</span>
+            <span class="sf-speaker-contact">@handle | email@company.com</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      width: 1280,
+      height: 720,
+      margin: 0,
+      controls: true,
+      progress: true,
+      slideNumber: true,
+      transition: 'fade',
+      backgroundTransition: 'fade',
+    });
+  </script>
+</body>
+</html>
