@@ -1,0 +1,367 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <!-- Bright daytime sky -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0A3A7A"/>
+      <stop offset="40%"  stop-color="#1A72CC"/>
+      <stop offset="80%"  stop-color="#3AAAE8"/>
+      <stop offset="100%" stop-color="#70CCF5"/>
+    </linearGradient>
+    <!-- Ground bright green -->
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1E8035"/>
+      <stop offset="40%"  stop-color="#126025"/>
+      <stop offset="100%" stop-color="#062010"/>
+    </linearGradient>
+    <!-- Ravine -->
+    <linearGradient id="ravine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#041828"/>
+      <stop offset="100%" stop-color="#010508"/>
+    </linearGradient>
+    <!-- Wood plank gradient -->
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#C4884A"/>
+      <stop offset="50%"  stop-color="#A0682E"/>
+      <stop offset="100%" stop-color="#7A4C1E"/>
+    </linearGradient>
+    <!-- Wood dark grain -->
+    <linearGradient id="woodDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#8B5A22"/>
+      <stop offset="100%" stop-color="#5A3810"/>
+    </linearGradient>
+    <!-- Sun glow -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#FFFFFF"  stop-opacity="1"/>
+      <stop offset="20%"  stop-color="#EDEF00"  stop-opacity="0.9"/>
+      <stop offset="60%"  stop-color="#F0A020"  stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#F0A020"  stop-opacity="0"/>
+    </radialGradient>
+    <!-- Mist bright glow -->
+    <radialGradient id="mistGlow" cx="50%" cy="85%" r="60%">
+      <stop offset="0%"   stop-color="#70E8FF"  stop-opacity="0.55"/>
+      <stop offset="50%"  stop-color="#24CBE5"  stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#24CBE5"  stop-opacity="0"/>
+    </radialGradient>
+    <!-- Break glow -->
+    <radialGradient id="breakGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#90F0FF"  stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#24CBE5"  stop-opacity="0"/>
+    </radialGradient>
+    <!-- Light ray -->
+    <linearGradient id="ray" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#FFFFFF"  stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#FFFFFF"  stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur3">  <feGaussianBlur stdDeviation="3"/>  </filter>
+    <filter id="blur6">  <feGaussianBlur stdDeviation="6"/>  </filter>
+    <filter id="blur12"> <feGaussianBlur stdDeviation="12"/> </filter>
+    <filter id="blur20"> <feGaussianBlur stdDeviation="20"/> </filter>
+  </defs>
+
+  <!-- ═══ SKY ═══ -->
+  <rect width="1280" height="720" fill="url(#sky)"/>
+
+  <!-- Bright clouds -->
+  <ellipse cx="220"  cy="130" rx="260" ry="65"  fill="white" opacity="0.22" filter="url(#blur6)"/>
+  <ellipse cx="180"  cy="110" rx="180" ry="45"  fill="white" opacity="0.18" filter="url(#blur6)"/>
+  <ellipse cx="750"  cy="95"  rx="220" ry="55"  fill="white" opacity="0.16" filter="url(#blur6)"/>
+  <ellipse cx="1050" cy="140" rx="200" ry="50"  fill="white" opacity="0.20" filter="url(#blur6)"/>
+  <ellipse cx="1100" cy="115" rx="150" ry="38"  fill="white" opacity="0.15" filter="url(#blur6)"/>
+  <ellipse cx="500"  cy="160" rx="180" ry="40"  fill="white" opacity="0.12" filter="url(#blur6)"/>
+
+  <!-- ═══ SUN (upper right) ═══ -->
+  <circle cx="1060" cy="105" r="120" fill="url(#sunGlow)" filter="url(#blur12)"/>
+  <circle cx="1060" cy="105" r="42"  fill="#FFFCE0" opacity="0.95"/>
+  <circle cx="1060" cy="105" r="28"  fill="white"   opacity="1"/>
+
+  <!-- Sun rays -->
+  <line x1="1060" y1="55"  x2="1060" y2="20"  stroke="white" stroke-width="2.5" opacity="0.5"/>
+  <line x1="1060" y1="155" x2="1060" y2="190" stroke="white" stroke-width="2.5" opacity="0.5"/>
+  <line x1="1010" y1="105" x2="975"  y2="105" stroke="white" stroke-width="2.5" opacity="0.5"/>
+  <line x1="1110" y1="105" x2="1145" y2="105" stroke="white" stroke-width="2.5" opacity="0.5"/>
+  <line x1="1024" y1="69"  x2="1000" y2="45"  stroke="white" stroke-width="2"   opacity="0.4"/>
+  <line x1="1096" y1="69"  x2="1120" y2="45"  stroke="white" stroke-width="2"   opacity="0.4"/>
+  <line x1="1024" y1="141" x2="1000" y2="165" stroke="white" stroke-width="2"   opacity="0.4"/>
+  <line x1="1096" y1="141" x2="1120" y2="165" stroke="white" stroke-width="2"   opacity="0.4"/>
+
+  <!-- God rays / light shafts from sun -->
+  <polygon points="1060,133 940,720 1000,720" fill="url(#ray)" opacity="0.18"/>
+  <polygon points="1060,133 800,720  860,720"  fill="url(#ray)" opacity="0.12"/>
+  <polygon points="1060,133 680,720  740,720"  fill="url(#ray)" opacity="0.08"/>
+  <polygon points="1060,133 1080,720 1140,720" fill="url(#ray)" opacity="0.15"/>
+  <polygon points="1060,133 1200,720 1280,720" fill="url(#ray)" opacity="0.10"/>
+
+  <!-- ═══ DISTANT HILLS ═══ -->
+  <path d="M0 370 Q90 315 200 340 Q310 308 420 332 Q490 308 550 328 L550 720 L0 720 Z"
+        fill="#0A3818" opacity="0.65"/>
+  <path d="M730 325 Q840 290 960 318 Q1060 285 1170 310 Q1230 290 1280 305 L1280 720 L730 720 Z"
+        fill="#0A3818" opacity="0.65"/>
+
+  <!-- ═══ RAVINE — wider gap x=520 to x=760 ═══ -->
+  <path d="M518 406 L500 720 L780 720 L762 406 Z" fill="url(#ravine)"/>
+  <!-- Rock walls -->
+  <path d="M518 406 L500 720 L528 720 L545 406 Z" fill="#0F2E4A" opacity="0.9"/>
+  <path d="M735 406 L752 720 L780 720 L762 406 Z" fill="#0F2E4A" opacity="0.9"/>
+  <!-- Rock texture -->
+  <path d="M518 435 L510 455 L519 475 L511 500 L520 525 L513 555 L522 585"
+        stroke="#0A2235" stroke-width="2" fill="none" opacity="0.7"/>
+  <path d="M762 445 L772 465 L761 490 L770 518 L759 545 L769 572"
+        stroke="#0A2235" stroke-width="2" fill="none" opacity="0.7"/>
+  <!-- Rock outcroppings left -->
+  <path d="M518 460 L505 478 L520 485 Z" fill="#122840" opacity="0.85"/>
+  <path d="M515 545 L500 563 L517 570 Z" fill="#122840" opacity="0.75"/>
+  <path d="M519 630 L503 648 L521 654 Z" fill="#122840" opacity="0.65"/>
+  <!-- Rock outcroppings right -->
+  <path d="M762 470 L778 487 L760 494 Z" fill="#122840" opacity="0.85"/>
+  <path d="M764 558 L780 575 L762 582 Z" fill="#122840" opacity="0.75"/>
+
+  <!-- Bright mist / glow in ravine -->
+  <rect x="498" y="390" width="284" height="330" fill="url(#mistGlow)"/>
+  <ellipse cx="640" cy="700" rx="200" ry="70"  fill="#70E8FF" opacity="0.20" filter="url(#blur12)"/>
+  <ellipse cx="640" cy="600" rx="130" ry="65"  fill="#24CBE5" opacity="0.18" filter="url(#blur6)"/>
+  <ellipse cx="640" cy="510" rx="90"  ry="45"  fill="#24CBE5" opacity="0.12" filter="url(#blur6)"/>
+
+  <!-- ═══ GROUND PLATFORMS ═══ -->
+  <!-- Left -->
+  <path d="M0 406 L524 406 L518 720 L0 720 Z" fill="url(#ground)"/>
+  <path d="M0 406 Q180 401 360 404 Q460 400 524 406" stroke="#3AB050" stroke-width="2" fill="none" opacity="0.5"/>
+  <!-- Grass tufts left edge -->
+  <path d="M478 404 Q483 393 488 404" stroke="#3AB050" stroke-width="2.5" fill="none"/>
+  <path d="M492 403 Q497 392 502 403" stroke="#2A9040" stroke-width="2.5" fill="none"/>
+  <path d="M506 404 Q510 394 514 404" stroke="#3AB050" stroke-width="2.5" fill="none"/>
+
+  <!-- Right -->
+  <path d="M760 406 L1280 406 L1280 720 L766 720 Z" fill="url(#ground)"/>
+  <path d="M760 406 Q900 401 1050 404 Q1180 400 1280 406" stroke="#3AB050" stroke-width="2" fill="none" opacity="0.5"/>
+  <!-- Grass tufts right edge -->
+  <path d="M766 404 Q771 393 776 404" stroke="#3AB050" stroke-width="2.5" fill="none"/>
+  <path d="M780 403 Q785 392 790 403" stroke="#2A9040" stroke-width="2.5" fill="none"/>
+  <path d="M794 404 Q798 394 802 404" stroke="#3AB050" stroke-width="2.5" fill="none"/>
+
+  <!-- ═══ MID BACKGROUND TREES (darker, distance) ═══ -->
+  <!-- Left -->
+  <polygon points="15,408  58,312  101,408"  fill="#0A4A1E"/>
+  <polygon points="30,382  58,292   86,382"  fill="#0E5C26"/>
+  <rect x="51"  y="406" width="14" height="28" fill="#050F08"/>
+  <polygon points="95,410  143,308  191,410"  fill="#0C5022"/>
+  <polygon points="110,378 143,285  176,378"  fill="#106228"/>
+  <rect x="136" y="408" width="14" height="26" fill="#050F08"/>
+  <polygon points="185,408 240,298  295,408"  fill="#0A4A1E"/>
+  <polygon points="200,376 240,276  280,376"  fill="#0E5C26"/>
+  <rect x="233" y="406" width="14" height="28" fill="#050F08"/>
+  <!-- Right -->
+  <polygon points="985,408 1040,298 1095,408" fill="#0A4A1E"/>
+  <polygon points="1000,376 1040,276 1080,376" fill="#0E5C26"/>
+  <rect x="1033" y="406" width="14" height="28" fill="#050F08"/>
+  <polygon points="1089,410 1137,308 1185,410" fill="#0C5022"/>
+  <polygon points="1104,378 1137,285 1170,378" fill="#106228"/>
+  <rect x="1130" y="408" width="14" height="26" fill="#050F08"/>
+  <polygon points="1179,408 1234,298 1280,408" fill="#0A4A1E"/>
+  <polygon points="1194,376 1234,276 1265,376" fill="#0E5C26"/>
+  <rect x="1227" y="406" width="14" height="28" fill="#050F08"/>
+
+  <!-- ═══ FOREGROUND TREES — LEFT ═══ -->
+  <!-- Tree 1 -->
+  <polygon points="12,412  80,218  148,412"  fill="#126828"/>
+  <polygon points="30,372  80,196  130,372"  fill="#1A8A38"/>
+  <polygon points="48,332  80,170  112,332"  fill="#50B432"/>
+  <rect x="73" y="410" width="16" height="50" fill="#040C06"/>
+  <!-- Light on top -->
+  <polygon points="55,280  80,210  105,280"  fill="#64E572" opacity="0.6"/>
+  <!-- Tree 2 -->
+  <polygon points="120,412 198,212 276,412"  fill="#106025"/>
+  <polygon points="138,368 198,190 258,368"  fill="#168030"/>
+  <polygon points="155,324 198,166 241,324"  fill="#50B432"/>
+  <rect x="191" y="410" width="16" height="48" fill="#040C06"/>
+  <polygon points="165,270 198,195 231,270"  fill="#64E572" opacity="0.55"/>
+  <!-- Tree 3 -->
+  <polygon points="248,412 318,228 388,412"  fill="#126828"/>
+  <polygon points="265,372 318,206 371,372"  fill="#1A8A38"/>
+  <polygon points="282,332 318,182 354,332"  fill="#50B432"/>
+  <rect x="311" y="410" width="14" height="44" fill="#040C06"/>
+  <polygon points="292,288 318,210 344,288"  fill="#64E572" opacity="0.5"/>
+  <!-- Tree 4 near edge -->
+  <polygon points="375,412 428,285 481,412"  fill="#0E5820"/>
+  <polygon points="390,375 428,262 466,375"  fill="#168030"/>
+  <polygon points="405,338 428,238 451,338"  fill="#50B432"/>
+  <rect x="422" y="410" width="12" height="38" fill="#040C06"/>
+
+  <!-- ═══ FOREGROUND TREES — RIGHT ═══ -->
+  <!-- Tree 1 near edge -->
+  <polygon points="799,412 852,285 905,412"  fill="#0E5820"/>
+  <polygon points="814,375 852,262 890,375"  fill="#168030"/>
+  <polygon points="829,338 852,238 875,338"  fill="#50B432"/>
+  <rect x="846" y="410" width="12" height="38" fill="#040C06"/>
+  <!-- Tree 2 -->
+  <polygon points="892,412 962,228 1032,412" fill="#126828"/>
+  <polygon points="909,372 962,206 1015,372" fill="#1A8A38"/>
+  <polygon points="926,332 962,182 998,332"  fill="#50B432"/>
+  <rect x="955" y="410" width="14" height="44" fill="#040C06"/>
+  <polygon points="936,288 962,210 988,288"  fill="#64E572" opacity="0.5"/>
+  <!-- Tree 3 -->
+  <polygon points="1004,412 1082,212 1160,412" fill="#106025"/>
+  <polygon points="1022,368 1082,190 1142,368" fill="#168030"/>
+  <polygon points="1039,324 1082,166 1125,324" fill="#50B432"/>
+  <rect x="1075" y="410" width="16" height="48" fill="#040C06"/>
+  <polygon points="1049,270 1082,195 1115,270" fill="#64E572" opacity="0.55"/>
+  <!-- Tree 4 -->
+  <polygon points="1132,412 1200,218 1268,412" fill="#126828"/>
+  <polygon points="1150,372 1200,196 1250,372" fill="#1A8A38"/>
+  <polygon points="1168,332 1200,170 1232,332" fill="#50B432"/>
+  <rect x="1193" y="410" width="16" height="50" fill="#040C06"/>
+  <polygon points="1175,280 1200,210 1225,280" fill="#64E572" opacity="0.6"/>
+
+  <!-- ═══ AMBIENT PARTICLES / FIREFLIES ═══ -->
+  <circle cx="340" cy="348" r="3"   fill="#64E572" opacity="0.85"/>
+  <circle cx="395" cy="318" r="2"   fill="#50B432" opacity="0.75"/>
+  <circle cx="268" cy="365" r="2.5" fill="#24CBE5" opacity="0.70"/>
+  <circle cx="448" cy="352" r="2"   fill="#64E572" opacity="0.65"/>
+  <circle cx="855" cy="340" r="3"   fill="#64E572" opacity="0.80"/>
+  <circle cx="912" cy="362" r="2"   fill="#50B432" opacity="0.70"/>
+  <circle cx="978" cy="345" r="2.5" fill="#24CBE5" opacity="0.65"/>
+  <circle cx="320" cy="390" r="1.5" fill="#EDEF00" opacity="0.55"/>
+  <circle cx="960" cy="385" r="1.5" fill="#EDEF00" opacity="0.50"/>
+
+  <!-- ═══ WOODEN CURVED BRIDGE ═══ -->
+  <!--
+    Bridge spans x=435 → x=845
+    Curved: gentle arc, peaks ~30px above endpoints at center
+    Left section:  x=435 → x=590  (curve control: cx=512 cy=368)
+    GAP:           x=590 → x=730  (140px — large)
+    Right section: x=730 → x=845  (curve control: cx=787 cy=368)
+    Wooden posts at x=460 and x=820
+  -->
+
+  <!-- ─── Main suspension ropes (behind everything) ─── -->
+  <!-- Left rope top - curves upward arc -->
+  <path d="M 440,395 Q 512,365 590,390" fill="none" stroke="#3A2810" stroke-width="4" stroke-linecap="round"/>
+  <!-- Right rope top -->
+  <path d="M 730,390 Q 788,365 840,395" fill="none" stroke="#3A2810" stroke-width="4" stroke-linecap="round"/>
+  <!-- Left rope bottom -->
+  <path d="M 440,408 Q 512,380 590,403" fill="none" stroke="#2A1C08" stroke-width="3" stroke-linecap="round"/>
+  <!-- Right rope bottom -->
+  <path d="M 730,403 Q 788,380 840,408" fill="none" stroke="#2A1C08" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- ─── Wooden posts / anchors ─── -->
+  <!-- Left post -->
+  <rect x="436" y="378" width="16" height="80" fill="#6A4418" rx="2"/>
+  <rect x="432" y="374" width="24" height="10" fill="#8A5C22" rx="2"/>
+  <!-- Right post -->
+  <rect x="828" y="378" width="16" height="80" fill="#6A4418" rx="2"/>
+  <rect x="824" y="374" width="24" height="10" fill="#8A5C22" rx="2"/>
+
+  <!-- ─── LEFT SECTION PLANKS (x=454 to x=586, curved y positions) ─── -->
+  <!-- Plank y values follow arc: y = 395 - 27*sin(π*(x-435)/155) roughly -->
+  <!-- I'll approximate positions manually for each plank -->
+  <!-- Each plank: rect centered on bridge path, rotated slightly to follow curve -->
+
+  <!-- Plank at x≈454  y≈393 -->
+  <rect x="448" y="389" width="12" height="18" fill="url(#wood)" rx="1"/>
+  <line x1="450" y1="389" x2="450" y2="407" stroke="#5A3010" stroke-width="1" opacity="0.4"/>
+  <line x1="454" y1="389" x2="454" y2="407" stroke="#5A3010" stroke-width="1" opacity="0.3"/>
+  <!-- x≈468 y≈390 -->
+  <rect x="462" y="386" width="12" height="18" fill="url(#wood)" rx="1"/>
+  <line x1="464" y1="386" x2="464" y2="404" stroke="#5A3010" stroke-width="1" opacity="0.4"/>
+  <!-- x≈482 y≈387 -->
+  <rect x="476" y="383" width="12" height="18" fill="url(#wood)" rx="1"/>
+  <line x1="478" y1="383" x2="478" y2="401" stroke="#5A3010" stroke-width="1" opacity="0.4"/>
+  <!-- x≈496 y≈384 -->
+  <rect x="490" y="380" width="12" height="18" fill="url(#wood)" rx="1"/>
+  <line x1="492" y1="380" x2="492" y2="398" stroke="#5A3010" stroke-width="1" opacity="0.4"/>
+  <!-- x≈510 y≈382 -->
+  <rect x="504" y="378" width="12" height="18" fill="url(#wood)" rx="1"/>
+  <!-- x≈524 y≈380 -->
+  <rect x="518" y="376" width="12" height="18" fill="url(#wood)" rx="1"/>
+  <!-- x≈538 y≈379 -->
+  <rect x="532" y="375" width="12" height="18" fill="url(#wood)" rx="1"/>
+  <!-- x≈552 y≈379 (flattest point / peak) -->
+  <rect x="546" y="374" width="12" height="18" fill="url(#wood)" rx="1"/>
+  <!-- x≈566 y≈380 -->
+  <rect x="560" y="375" width="12" height="18" fill="url(#wood)" rx="1"/>
+  <!-- x≈580 y≈382 -->
+  <rect x="574" y="377" width="12" height="18" fill="url(#wood)" rx="1"/>
+  <!-- Last plank before gap x≈587 y≈385 -->
+  <rect x="581" y="381" width="10" height="18" fill="url(#woodDark)" rx="1"/>
+
+  <!-- Vertical rope hangers left section -->
+  <line x1="454" y1="374" x2="454" y2="394" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+  <line x1="468" y1="370" x2="468" y2="391" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+  <line x1="482" y1="367" x2="482" y2="387" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+  <line x1="496" y1="365" x2="496" y2="385" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+  <line x1="510" y1="363" x2="510" y2="383" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+  <line x1="524" y1="362" x2="524" y2="381" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+  <line x1="538" y1="361" x2="538" y2="380" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+  <line x1="552" y1="360" x2="552" y2="379" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+  <line x1="566" y1="361" x2="566" y2="380" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+  <line x1="580" y1="362" x2="580" y2="382" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- ─── GAP — broken frayed rope ends ─── -->
+  <!-- Frayed left rope end -->
+  <path d="M590 388 L596 386 L593 390 L599 387 L594 392" stroke="#5A3810" stroke-width="2" fill="none"/>
+  <path d="M590 402 L597 400 L593 405 L600 402"          stroke="#3A2408" stroke-width="2" fill="none"/>
+  <!-- Frayed right rope end -->
+  <path d="M730 388 L724 386 L727 390 L721 387 L726 392" stroke="#5A3810" stroke-width="2" fill="none"/>
+  <path d="M730 402 L723 400 L727 405 L720 402"          stroke="#3A2408" stroke-width="2" fill="none"/>
+
+  <!-- Falling plank 1 — large, tilted -->
+  <g transform="translate(600,398) rotate(28)">
+    <rect x="0"  y="0" width="55" height="16" fill="#A06830" rx="1"/>
+    <rect x="0"  y="13" width="55" height="5" fill="#6A4018"/>
+    <line x1="5"  y1="0" x2="5"  y2="16" stroke="#7A5020" stroke-width="1" opacity="0.5"/>
+    <line x1="15" y1="0" x2="15" y2="16" stroke="#7A5020" stroke-width="1" opacity="0.5"/>
+    <line x1="25" y1="0" x2="25" y2="16" stroke="#7A5020" stroke-width="1" opacity="0.4"/>
+  </g>
+  <!-- Falling rope fragment -->
+  <path d="M625,420 Q638,445 630,475" stroke="#4A3018" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Falling plank 2 -->
+  <g transform="translate(640,475) rotate(-20)">
+    <rect x="0" y="0" width="40" height="13" fill="#8A5828" rx="1"/>
+    <rect x="0" y="11" width="40" height="4"  fill="#5A3810"/>
+    <line x1="8"  y1="0" x2="8"  y2="13" stroke="#6A4018" stroke-width="1" opacity="0.5"/>
+    <line x1="20" y1="0" x2="20" y2="13" stroke="#6A4018" stroke-width="1" opacity="0.4"/>
+  </g>
+  <!-- Falling plank 3 -->
+  <g transform="translate(618,545) rotate(45)">
+    <rect x="0" y="0" width="28" height="10" fill="#7A4E22" rx="1"/>
+  </g>
+  <!-- Small debris -->
+  <ellipse cx="650" cy="608" rx="8"  ry="5"  fill="#6A4820" opacity="0.75"/>
+  <ellipse cx="632" cy="642" rx="5"  ry="3"  fill="#5A3810" opacity="0.60"/>
+  <ellipse cx="665" cy="625" rx="6"  ry="4"  fill="#5A3810" opacity="0.55"/>
+  <ellipse cx="645" cy="670" rx="3"  ry="2"  fill="#4A2E10" opacity="0.45"/>
+
+  <!-- Bright glow at break point -->
+  <ellipse cx="660" cy="408" rx="80" ry="50" fill="url(#breakGlow)" filter="url(#blur6)"/>
+
+  <!-- ─── RIGHT SECTION PLANKS (x=732 to x=842) ─── -->
+  <!-- Following same arc back up -->
+  <!-- First plank after gap x≈732 y≈385 -->
+  <rect x="730" y="381" width="10" height="18" fill="url(#woodDark)" rx="1"/>
+  <!-- x≈744 y≈382 -->
+  <rect x="740" y="378" width="12" height="18" fill="url(#wood)" rx="1"/>
+  <!-- x≈758 y≈380 -->
+  <rect x="754" y="376" width="12" height="18" fill="url(#wood)" rx="1"/>
+  <!-- x≈772 y≈379 (peak) -->
+  <rect x="768" y="374" width="12" height="18" fill="url(#wood)" rx="1"/>
+  <!-- x≈786 y≈380 -->
+  <rect x="782" y="376" width="12" height="18" fill="url(#wood)" rx="1"/>
+  <!-- x≈800 y≈382 -->
+  <rect x="796" y="378" width="12" height="18" fill="url(#wood)" rx="1"/>
+  <!-- x≈814 y≈385 -->
+  <rect x="810" y="381" width="12" height="18" fill="url(#wood)" rx="1"/>
+  <!-- x≈828 y≈390 -->
+  <rect x="824" y="386" width="12" height="18" fill="url(#wood)" rx="1"/>
+  <!-- x≈838 y≈393 -->
+  <rect x="834" y="390" width="12" height="18" fill="url(#wood)" rx="1"/>
+
+  <!-- Vertical rope hangers right section -->
+  <line x1="744" y1="362" x2="744" y2="382" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+  <line x1="758" y1="361" x2="758" y2="380" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+  <line x1="772" y1="360" x2="772" y2="379" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+  <line x1="786" y1="361" x2="786" y2="380" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+  <line x1="800" y1="362" x2="800" y2="382" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+  <line x1="814" y1="364" x2="814" y2="385" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+  <line x1="828" y1="367" x2="828" y2="390" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+  <line x1="840" y1="371" x2="840" y2="394" stroke="#4A3018" stroke-width="1.5" opacity="0.8"/>
+
+</svg>

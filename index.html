@@ -12,153 +12,713 @@
     <div class="slides">
 
       <!-- ============================================================
-           SLIDE TYPE: Title (with characters)
+           SLIDE 1: Title
            ============================================================ -->
       <section class="sf-title-a">
-        <div class="sf-title-content">
-          <h1>Presentation Title</h1>
-          <h2>Subtitle or tagline goes here</h2>
+        <img src="assets/image2.png" class="sf-logo" alt="Salesforce" />
+        <div class="sf-title-main">
+          <h1>Ohana Security.<br>Unlocking the real<br>customer 360.</h1>
           <div class="sf-speaker">
-            <span class="sf-speaker-name">Name, Title</span>
-            <span class="sf-speaker-contact">@handle | email@company.com</span>
+            <span class="sf-speaker-name">Arturo Rojas</span>
+            <span class="sf-speaker-role">Consumption Account Senior Manager</span>
+            <span class="sf-speaker-contact">rojas.broca.arturo@gmail.com</span>
           </div>
         </div>
       </section>
 
       <!-- ============================================================
-           SLIDE TYPE: Segue / Section divider
+           SLIDE 2: Thank You
            ============================================================ -->
-      <section class="sf-segue">
-        <h2>Section Title</h2>
-        <p>Optional subtitle for this section</p>
+      <section class="sf-thankyou">
+        <img src="assets/image2.png" class="sf-logo-sm" alt="Salesforce" />
+        <div class="sf-thankyou-main">
+          <h1>THANK YOU</h1>
+        </div>
       </section>
 
       <!-- ============================================================
-           SLIDE TYPE: Basic Content — single column
+           SLIDE 3: Agenda
            ============================================================ -->
-      <section class="sf-content">
-        <div class="sf-slide-header">
-          <h3>Slide Title</h3>
-          <p class="sf-subtitle">Optional subtitle</p>
+      <section class="sf-agenda-slide">
+        <div class="sf-agenda-title">Agenda</div>
+        <div class="sf-agenda-body">
+
+          <div class="sf-agenda-item">
+            <div class="sf-agenda-num">1</div>
+            <div class="sf-agenda-label">Current State and Challenges</div>
+          </div>
+
+          <div class="sf-agenda-divider"></div>
+
+          <div class="sf-agenda-item">
+            <div class="sf-agenda-num">2</div>
+            <div class="sf-agenda-label">Architecture and Future Architecture</div>
+          </div>
+
+          <div class="sf-agenda-divider"></div>
+
+          <div class="sf-agenda-item">
+            <div class="sf-agenda-num">3</div>
+            <div class="sf-agenda-label">Business Value and Consumption</div>
+          </div>
+
         </div>
-        <div class="sf-body">
-          <ul>
-            <li>First level text is set at twenty point Salesforce Sans</li>
-            <li>Second key point goes here</li>
-            <li>Third key point goes here
+      </section>
+
+      <!-- ============================================================
+           SLIDE 4: Broken Bridge + Client Data
+           ============================================================ -->
+      <section class="sf-bridge-slide">
+        <img src="assets/broken-bridge.svg" class="sf-bridge-img" alt="Forest with broken bridge" />
+        <div class="sf-slide-title">Current Ohana Security Landscape</div>
+        <div class="sf-data-panel">
+
+          <p class="sf-panel-legend">Ohana Security: A decade of significant growth</p>
+
+          <!-- Source icons row -->
+          <div class="sf-source-icons">
+
+            <!-- Snowflake -->
+            <div class="sf-source-icon">
+              <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <line x1="20" y1="3"  x2="20" y2="37" stroke="#29B5E8" stroke-width="3.5" stroke-linecap="round"/>
+                <line x1="3"  y1="20" x2="37" y2="20" stroke="#29B5E8" stroke-width="3.5" stroke-linecap="round"/>
+                <line x1="6"  y1="6"  x2="34" y2="34" stroke="#29B5E8" stroke-width="3.5" stroke-linecap="round"/>
+                <line x1="34" y1="6"  x2="6"  y2="34" stroke="#29B5E8" stroke-width="3.5" stroke-linecap="round"/>
+                <line x1="14" y1="8"  x2="20" y2="14" stroke="#29B5E8" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="26" y1="8"  x2="20" y2="14" stroke="#29B5E8" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="14" y1="32" x2="20" y2="26" stroke="#29B5E8" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="26" y1="32" x2="20" y2="26" stroke="#29B5E8" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="8"  y1="14" x2="14" y2="20" stroke="#29B5E8" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="8"  y1="26" x2="14" y2="20" stroke="#29B5E8" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="32" y1="14" x2="26" y2="20" stroke="#29B5E8" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="32" y1="26" x2="26" y2="20" stroke="#29B5E8" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="20" cy="20" r="3.5" fill="#29B5E8"/>
+              </svg>
+              <span>Snowflake</span>
+            </div>
+
+            <!-- Databricks -->
+            <div class="sf-source-icon">
+              <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="20,3  36,12 36,15 20,24 4,15 4,12"  fill="#FF3621"/>
+                <polygon points="20,13 36,22 36,25 20,34 4,25 4,22"  fill="#FF3621" opacity="0.65"/>
+                <polygon points="4,18 20,27 36,18 36,20 20,29 4,20"  fill="#FF3621" opacity="0.30"/>
+              </svg>
+              <span>Databricks</span>
+            </div>
+
+            <!-- Sales Cloud -->
+            <div class="sf-source-icon">
+              <svg viewBox="0 0 48 36" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13,32 Q2,32 2,22 Q2,14 9,12 Q9,3 18,3 Q23,3 25,7 Q28,4 33,5 Q40,5 42,12 Q47,12 47,19 Q47,32 36,32 Z" fill="#0070D2"/>
+                <circle cx="24" cy="14" r="5" fill="white"/>
+                <path d="M13,30 Q13,21 24,21 Q35,21 35,30" fill="white"/>
+              </svg>
+              <span>Sales Cloud</span>
+            </div>
+
+            <!-- Service Cloud -->
+            <div class="sf-source-icon">
+              <svg viewBox="0 0 48 36" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13,32 Q2,32 2,22 Q2,14 9,12 Q9,3 18,3 Q23,3 25,7 Q28,4 33,5 Q40,5 42,12 Q47,12 47,19 Q47,32 36,32 Z" fill="#00A1E0"/>
+                <!-- Headset -->
+                <path d="M16,19 Q16,11 24,11 Q32,11 32,19" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                <rect x="14" y="18" width="4" height="6" rx="2" fill="white"/>
+                <rect x="30" y="18" width="4" height="6" rx="2" fill="white"/>
+                <path d="M34,24 Q34,28 29,28 L25,28" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span>Service Cloud</span>
+            </div>
+
+            <!-- Marketing Cloud -->
+            <div class="sf-source-icon">
+              <svg viewBox="0 0 48 36" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13,32 Q2,32 2,22 Q2,14 9,12 Q9,3 18,3 Q23,3 25,7 Q28,4 33,5 Q40,5 42,12 Q47,12 47,19 Q47,32 36,32 Z" fill="#F66A00"/>
+                <!-- Envelope -->
+                <rect x="14" y="13" width="20" height="14" rx="2" fill="white"/>
+                <polyline points="14,13 24,22 34,13" fill="none" stroke="#F66A00" stroke-width="2"/>
+              </svg>
+              <span>Marketing Cloud</span>
+            </div>
+
+          </div><!-- /.sf-source-icons -->
+
+          <table class="sf-data-table sf-collapsed" id="bridgeDataTable">
+            <thead>
+              <tr>
+                <th>Data Type</th>
+                <th>Volume</th>
+                <th>Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Telemetry</td>
+                <td>80,000,000</td>
+                <td>Telemetry / Databricks</td>
+              </tr>
+              <tr>
+                <td>Accounts (Sales)</td>
+                <td>1,000,000</td>
+                <td>Sales Cloud</td>
+              </tr>
+              <tr>
+                <td>Contacts (Sales)<sup>*</sup></td>
+                <td>10,000,000</td>
+                <td>Sales Cloud</td>
+              </tr>
+              <tr>
+                <td>Accounts (Service)</td>
+                <td>1,000,000</td>
+                <td>Service Cloud</td>
+              </tr>
+              <tr>
+                <td>Contacts (Service)<sup>*</sup></td>
+                <td>10,000,000</td>
+                <td>Service Cloud</td>
+              </tr>
+              <tr>
+                <td>Contacts (Marketing Cloud)<sup>*</sup></td>
+                <td>10,000,000</td>
+                <td>Marketing Cloud</td>
+              </tr>
+              <tr>
+                <td>Accounts (Snowflake propensity)</td>
+                <td>1,000,000</td>
+                <td>Snowflake</td>
+              </tr>
+              <tr>
+                <td>Opportunities</td>
+                <td>5,000,000</td>
+                <td>Sales Cloud</td>
+              </tr>
+              <tr>
+                <td>Opportunity Line Items</td>
+                <td>20,000,000</td>
+                <td>Sales Cloud</td>
+              </tr>
+              <tr>
+                <td>Service / Support Cases<sup>*</sup></td>
+                <td>20,000,000</td>
+                <td>Service Cloud</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="sf-totals-row" onclick="toggleDataTable()">
+                <td class="sf-total-label">Total Data <span class="sf-toggle-icon">▶</span></td>
+                <td>158,000,000</td>
+                <td>5 Sources</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <!-- Right side tagline box -->
+        <div class="sf-right-tagline">
+          <p>CEO Vision: A customer-first approach to sustain the growth of Ohana Security</p>
+        </div>
+
+        <!-- Floating objectives — right side of bridge -->
+        <div class="sf-bridge-objectives">
+          <span>Improve Customer Experiences</span>
+          <span>Customer 360 View</span>
+          <span>Efficient AI Use Cases</span>
+          <span>Connected Experiences</span>
+        </div>
+
+        <!-- Floating challenges over the bridge gap -->
+        <div class="sf-bridge-challenges">
+          <span>Data Complexity</span>
+          <span>Siloed Data</span>
+          <span>Lack of Visibility</span>
+          <span>Disconnected Experiences</span>
+          <span>AI Fails</span>
+        </div>
+
+        <p class="sf-assumption"><sup>*</sup> Assumption: volume figures are estimated and have not yet been confirmed with the client.</p>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 5: Ohana Security Current Architecture
+           ============================================================ -->
+      <section class="sf-arch-slide">
+        <div class="sf-arch-title">Ohana Security Current Architecture</div>
+        <div class="sf-arch-body">
+          <img src="assets/architecture-asis.svg" class="sf-arch-img" alt="Ohana Security As-Is Architecture" />
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 6: Ohana Security Future Architecture
+           ============================================================ -->
+      <section class="sf-arch-slide" id="slide-future-arch">
+        <div class="sf-arch-title">Ohana Security Future Architecture</div>
+        <div class="sf-arch-body">
+          <img src="assets/architecture-future.svg" class="sf-arch-img" alt="Ohana Security Future Architecture" />
+
+          <!-- Invisible hotspot over Data 360 Home Org box -->
+          <div class="sf-hotspot" id="data360-hotspot">
+            <div class="sf-tooltip">
+              <p class="sf-tooltip-title">Data 360 Home Org</p>
               <ul>
-                <li>Sub-point detail</li>
-                <li>Sub-point detail</li>
+                <li><strong>Single source of truth</strong> — Consolidates customer records across Ohana's data sources.</li>
+                <li><strong>Zero Copy Data Integration</strong> — Bi-directional access to external buying propensity scores in Snowflake and health scores in Databricks.</li>
+                <li><strong>Reliable AI</strong> — Autonomous agents that follow predictable, reliable paths grounded in trusted business data.</li>
+                <li>Processes high-volume product telemetry data to generate actionable metrics, such as predicted health scores, directly within the unified customer profile.</li>
+                <li><strong>Data Actions</strong> — Triggers automated, proactive workflows for upselling, cross-selling, and churn reduction.</li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </div>
+
         </div>
-        <div class="sf-footer">Footer text | Confidential</div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 7: Aligning technology to drive value
+           ============================================================ -->
+      <section class="sf-value-slide">
+        <div class="sf-arch-title">Aligning technology to drive value for Ohana Security.</div>
+
+        <div class="sf-value-grid">
+
+          <!-- COL 1: Strategy Priority -->
+          <div class="sf-vg-col">
+            <div class="sf-vg-header">Strategy Priority</div>
+            <div class="sf-vg-body">
+              <div class="sf-strategy sf-strategy-revenue">
+                <span>Revenue</span><span>Growth</span>
+              </div>
+              <div class="sf-strategy sf-strategy-cs">
+                <span>Customer</span><span>Satisfaction</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- COL 2: Business Objective -->
+          <div class="sf-vg-col">
+            <div class="sf-vg-header">Business Objective</div>
+            <div class="sf-vg-body">
+              <div class="sf-obj-group">
+                <div class="sf-obj-item">Grow wallet share</div>
+                <div class="sf-obj-item">Build and activate audiences</div>
+                <div class="sf-obj-item">Reduce churn</div>
+              </div>
+              <div class="sf-obj-group sf-obj-group-cs">
+                <div class="sf-obj-item">Proactive issue resolution</div>
+                <div class="sf-obj-item">Optimize customer journey mapping</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COL 3: Capability -->
+          <div class="sf-vg-col">
+            <div class="sf-vg-header">Capability</div>
+            <div class="sf-vg-body sf-cap-list">
+              <div class="sf-cap-item">Calculated Insights</div>
+              <div class="sf-cap-item">Customer 360</div>
+              <div class="sf-cap-item">Data Enrichment</div>
+              <div class="sf-cap-item">Identity Resolution</div>
+              <div class="sf-cap-item">Journey Management</div>
+              <div class="sf-cap-item">Predictive Analytics / Intelligence</div>
+              <div class="sf-cap-item">RAG Knowledge Articles</div>
+            </div>
+          </div>
+
+          <!-- COL 4: Value Driver / KPI -->
+          <div class="sf-vg-col">
+            <div class="sf-vg-header">Value Driver / KPI</div>
+            <div class="sf-vg-body sf-kpi-list">
+              <div class="sf-kpi-item sf-kpi-up">Increase in cross / up-sell</div>
+              <div class="sf-kpi-item sf-kpi-down">Decrease in customer attrition rate</div>
+              <div class="sf-kpi-item sf-kpi-down">Decrease in time to contact</div>
+              <div class="sf-kpi-item sf-kpi-up">Increase in case deflection</div>
+              <div class="sf-kpi-item sf-kpi-up">Increase in actionable insights</div>
+              <div class="sf-kpi-item sf-kpi-down">Decrease in cost to serve</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 8: Data 360 Rate Card
+           ============================================================ -->
+      <section class="sf-pdf-slide">
+        <div class="sf-arch-title">Data 360 Flex Credits — Rate Card</div>
+        <div class="sf-pdf-body">
+          <embed
+            src="assets/data360-rate-card.pdf"
+            type="application/pdf"
+            class="sf-pdf-embed"
+          />
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SLIDE 10: Data 360 Flex Credits Calculator
+           ============================================================ -->
+      <section class="sf-calc-slide">
+        <div class="sf-arch-title">Data 360 Flex Credits — Calculator</div>
+
+        <div class="sf-calc-body">
+
+          <!-- Foundation inputs -->
+          <div class="sf-calc-inputs">
+            <div class="sf-calc-field">
+              <label>Customers (Unified Profiles)</label>
+              <input type="number" id="inp-customers" value="1000000" onchange="calcD360()">
+            </div>
+            <div class="sf-calc-field">
+              <label>Data Sources</label>
+              <input type="number" id="inp-sources" value="5" onchange="calcD360()">
+            </div>
+            <div class="sf-calc-field">
+              <label>Related Data — Batch (rows)</label>
+              <input type="number" id="inp-related" value="158000000" onchange="calcD360()">
+            </div>
+            <div class="sf-calc-field">
+              <label>Telemetry Daily (rows/day)</label>
+              <input type="number" id="inp-telemetry" value="80000000" onchange="calcD360()">
+            </div>
+            <div class="sf-calc-field">
+              <label>Environment</label>
+              <select id="inp-env" onchange="calcD360()">
+                <option value="production">Production</option>
+                <option value="sandbox">Sandbox</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- Derived values -->
+          <div class="sf-calc-derived" id="calc-derived"></div>
+
+          <!-- Results table -->
+          <div class="sf-calc-results" id="d360-results">
+            <table class="sf-calc-table">
+              <thead>
+                <tr>
+                  <th>Usage Type</th>
+                  <th>Rows / Year</th>
+                  <th>Credits / Year</th>
+                  <th>% Total</th>
+                </tr>
+              </thead>
+              <tbody id="calc-body"></tbody>
+              <tfoot>
+                <tr class="sf-calc-total-row">
+                  <td>Total</td>
+                  <td>—</td>
+                  <td id="calc-total-credits">—</td>
+                  <td>100%</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <!-- ── Agentforce section ── -->
+          <div class="sf-calc-section-divider">Agentforce Use Cases</div>
+
+          <!-- Case Management — collapsible -->
+          <div class="sf-calc-results sf-af-block">
+            <table class="sf-calc-table sf-af-table" id="af-case-table">
+              <thead>
+                <tr class="sf-af-summary-row" onclick="toggleAfSection('case')">
+                  <td colspan="6" class="sf-af-summary-cell">
+                    <button class="sf-formula-toggle" id="af-case-toggle">▶</button>
+                    <span class="sf-af-summary-title">Case Management Agent</span>
+                    <span class="sf-af-summary-totals" id="af-case-preview"></span>
+                  </td>
+                </tr>
+                <tr class="sf-af-detail sf-af-col-header-row" id="af-case-col-headers" style="display:none">
+                  <th>Scenario</th>
+                  <th>Annual Cases</th>
+                  <th>% Handled</th>
+                  <th>Action Mileage</th>
+                  <th>Credits / Action</th>
+                  <th>Total Credits</th>
+                </tr>
+              </thead>
+              <tbody id="af-case-body"></tbody>
+              <tfoot class="sf-af-detail" id="af-case-tfoot" style="display:none">
+                <tr>
+                  <td colspan="6" class="sf-af-formula-foot">
+                    <span class="sf-formula-label">Formula:</span>
+                    Annual Cases × % Handled ÷ 100 × Action Mileage × Credits per Action = Total Credits
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <!-- FAQ Responses — collapsible -->
+          <div class="sf-calc-results sf-af-block">
+            <table class="sf-calc-table sf-af-table" id="af-faq-table">
+              <thead>
+                <tr class="sf-af-summary-row" onclick="toggleAfSection('faq')">
+                  <td colspan="6" class="sf-af-summary-cell">
+                    <button class="sf-formula-toggle" id="af-faq-toggle">▶</button>
+                    <span class="sf-af-summary-title">FAQ Responses</span>
+                    <span class="sf-af-summary-totals" id="af-faq-preview"></span>
+                  </td>
+                </tr>
+                <tr class="sf-af-detail sf-af-col-header-row" id="af-faq-col-headers" style="display:none">
+                  <th>Use Case</th>
+                  <th># FAQs</th>
+                  <th>% Handled</th>
+                  <th>Action Mileage</th>
+                  <th>Credits / Action</th>
+                  <th>Total Credits</th>
+                </tr>
+              </thead>
+              <tbody id="af-faq-body"></tbody>
+              <tfoot class="sf-af-detail" id="af-faq-tfoot" style="display:none">
+                <tr>
+                  <td colspan="6" class="sf-af-formula-foot">
+                    <span class="sf-formula-label">Formula:</span>
+                    # FAQs × % Handled ÷ 100 × Action Mileage × Credits per Action = Total Credits
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+        </div>
       </section>
 
       <!-- ============================================================
            SLIDE TYPE: Two Column
            ============================================================ -->
-      <section class="sf-content sf-two-col">
-        <div class="sf-slide-header">
-          <h3>Two Column Layout</h3>
-          <p class="sf-subtitle">Optional subtitle</p>
-        </div>
-        <div class="sf-body sf-columns">
-          <div class="sf-col">
-            <h4>Column One</h4>
-            <ul>
-              <li>First level text goes here</li>
-              <li>Second point goes here</li>
-              <li>Third point goes here</li>
-            </ul>
+      <!-- ============================================================
+           SLIDE 11: Customer Success Stories
+           ============================================================ -->
+      <section class="sf-success-slide sf-three-stories">
+        <div class="sf-arch-title">Customer Success Stories</div>
+
+        <div class="sf-success-body">
+
+          <!-- ── Left panel: FedEx ── -->
+          <div class="sf-success-left">
+
+            <div class="sf-story-logo-wrap">
+              <img src="assets/fedex-logo.svg" alt="FedEx" class="sf-story-logo sf-story-logo-fedex">
+            </div>
+
+            <div class="sf-success-headline">
+              "FedEx captures +2,000% ROI by turning data into action with Data 360."
+            </div>
+
+            <div class="sf-success-section-label">The Results</div>
+            <div class="sf-success-stats">
+              <div class="sf-success-stat">
+                <div class="sf-success-stat-number">+2,000%</div>
+                <div class="sf-success-stat-label">ROI reactivating dormant customers</div>
+              </div>
+              <div class="sf-success-stat">
+                <div class="sf-success-stat-number">13%</div>
+                <div class="sf-success-stat-label">Customer activation improvement</div>
+              </div>
+              <div class="sf-success-stat sf-success-stat-wide">
+                <div class="sf-success-stat-number">25% → 40%</div>
+                <div class="sf-success-stat-label">Activation rate in just 5 months</div>
+              </div>
+              <div class="sf-success-stat">
+                <div class="sf-success-stat-number">1B</div>
+                <div class="sf-success-stat-label">Personalized emails per year</div>
+              </div>
+            </div>
+
+            <div class="sf-success-quote">
+              <div class="sf-success-quote-mark">"</div>
+              <div class="sf-success-quote-body">
+                Data 360 enables us to know our customers better so we can partner with them to build their businesses. We can be more efficient through automation and improve experiences for customers, reps, and sales alike — ultimately driving top-line revenue.
+                <div class="sf-success-quote-attr">Angela Straub — Director of Solutions, Enterprise Customer Platform &amp; MDM, FedEx</div>
+              </div>
+            </div>
+
+            <div class="sf-success-section-label">Salesforce Products Used</div>
+            <div class="sf-success-products">
+              <span class="sf-success-product">Data 360</span>
+              <span class="sf-success-product">Marketing Cloud</span>
+              <span class="sf-success-product">Sales Cloud</span>
+              <span class="sf-success-product">Service Cloud</span>
+            </div>
+
+            <div class="sf-success-section-label">The Challenge</div>
+            <div class="sf-success-challenge">
+              Disconnected systems prevented FedEx from acting on millions of customer signals. Signed shipping contracts sat idle, prospects researching went unguided, and sales teams spent weeks pulling data manually — leaving massive revenue on the table.
+            </div>
+
           </div>
-          <div class="sf-col">
-            <h4>Column Two</h4>
-            <ul>
-              <li>First level text goes here</li>
-              <li>Second point goes here</li>
-              <li>Third point goes here</li>
-            </ul>
+
+          <!-- ── Right panel: United Football League ── -->
+          <div class="sf-success-right">
+
+            <div class="sf-story-logo-wrap">
+              <img src="assets/ufl-logo.webp" alt="United Football League" class="sf-story-logo sf-story-logo-ufl">
+            </div>
+
+            <div class="sf-success-headline">
+              "UFL becomes the first league to power live AI-driven game metrics on FOX broadcasts with Agentforce."
+            </div>
+
+            <div class="sf-success-section-label">The Results</div>
+            <div class="sf-success-stats">
+              <div class="sf-success-stat">
+                <div class="sf-success-stat-number">540K+</div>
+                <div class="sf-success-stat-label">Fans attended 2025 season games</div>
+              </div>
+              <div class="sf-success-stat">
+                <div class="sf-success-stat-number">200K</div>
+                <div class="sf-success-stat-label">Fan requests automated per year</div>
+              </div>
+              <div class="sf-success-stat">
+                <div class="sf-success-stat-number">20</div>
+                <div class="sf-success-stat-label">Reps freed for high-value fan relationships</div>
+              </div>
+              <div class="sf-success-stat sf-success-stat-wide">
+                <div class="sf-success-stat-number">1st</div>
+                <div class="sf-success-stat-label">League with live AI-powered broadcast metrics on FOX</div>
+              </div>
+            </div>
+
+            <div class="sf-success-quote">
+              <div class="sf-success-quote-mark">"</div>
+              <div class="sf-success-quote-body">
+                We want to give every fan the best possible experience. Agentforce answers the routine questions instantly, so our team can focus on the conversations that grow the league — suite bookings, group sales, and deeper fan relationships.
+                <div class="sf-success-quote-attr">UFL — Agentforce Fan Experience Initiative</div>
+              </div>
+            </div>
+
+            <div class="sf-success-section-label">Salesforce Products Used</div>
+            <div class="sf-success-products">
+              <span class="sf-success-product">Agentforce</span>
+              <span class="sf-success-product">Service Cloud</span>
+              <span class="sf-success-product">Data 360</span>
+              <span class="sf-success-product">Marketing Cloud</span>
+            </div>
+
+            <div class="sf-success-section-label">The Challenge</div>
+            <div class="sf-success-challenge">
+              With 200,000 annual fan requests handled by only 20 reps, routine queries — gate times, bag policies, ticket transfers — left no capacity for suite sales and group bookings that sustain league growth. Broadcasts lacked real-time AI-driven player performance insights.
+            </div>
+
           </div>
+
+          <!-- ── Third panel: Salesforce Customer Zero ── -->
+          <div class="sf-success-third">
+
+            <div class="sf-story-logo-wrap">
+              <img src="assets/salesforce-logo.svg" alt="Salesforce" class="sf-story-logo sf-story-logo-salesforce">
+            </div>
+
+            <div class="sf-success-headline">
+              "Salesforce handles 2M+ support conversations on its own Help site — resolving 85% autonomously, no hold music, no human handoff."
+            </div>
+
+            <div class="sf-success-section-label">The Results</div>
+            <div class="sf-success-stats">
+              <div class="sf-success-stat">
+                <div class="sf-success-stat-number">2M+</div>
+                <div class="sf-success-stat-label">Conversations handled on Salesforce Help</div>
+              </div>
+              <div class="sf-success-stat">
+                <div class="sf-success-stat-number">85%</div>
+                <div class="sf-success-stat-label">Resolution rate without human intervention</div>
+              </div>
+              <div class="sf-success-stat">
+                <div class="sf-success-stat-number">65%</div>
+                <div class="sf-success-stat-label">Faster response time for 9 in 10 users</div>
+              </div>
+              <div class="sf-success-stat">
+                <div class="sf-success-stat-number">5%</div>
+                <div class="sf-success-stat-label">Escalation rate (down from 26%)</div>
+              </div>
+            </div>
+
+            <div class="sf-success-quote">
+              <div class="sf-success-quote-mark">"</div>
+              <div class="sf-success-quote-body">
+                We built Agentforce on our own Help site before asking customers to trust it. Two million conversations later, the data speaks for itself — 85% resolved autonomously, response times cut by 65%.
+                <div class="sf-success-quote-attr">Salesforce — Customer Zero Initiative</div>
+              </div>
+            </div>
+
+            <div class="sf-success-section-label">Salesforce Products Used</div>
+            <div class="sf-success-products">
+              <span class="sf-success-product">Agentforce</span>
+              <span class="sf-success-product">Service Cloud</span>
+              <span class="sf-success-product">Einstein AI</span>
+            </div>
+
+            <div class="sf-success-section-label">The Challenge</div>
+            <div class="sf-success-challenge">
+              Salesforce needed to prove Agentforce could handle enterprise-scale support before asking customers to trust it. They deployed it on their own Help site as "Customer Zero" — fielding millions of real support requests across languages and time zones without human backup.
+            </div>
+
+          </div>
+
         </div>
-        <div class="sf-footer">Footer text | Confidential</div>
       </section>
 
       <!-- ============================================================
-           SLIDE TYPE: Three Column
+           SLIDE 12: Conclusions & Next Steps
            ============================================================ -->
-      <section class="sf-content sf-three-col">
-        <div class="sf-slide-header">
-          <h3>Three Column Layout</h3>
-          <p class="sf-subtitle">Optional subtitle</p>
+      <section class="sf-conclusion-slide">
+        <div class="sf-arch-title">Conclusions &amp; Next Steps</div>
+
+        <div class="sf-conclusion-body">
+
+          <!-- ── Left: Conclusions ── -->
+          <div class="sf-conclusion-left">
+            <div class="sf-conclusion-col-label">Conclusions</div>
+
+            <div class="sf-conclusion-item">
+              <div class="sf-conclusion-icon">01</div>
+              <div class="sf-conclusion-text">Data 360 is a complement of your data lakes and data warehouses — it acts on your critical data to unlock real-time decisioning without replacing existing investments.</div>
+            </div>
+
+            <div class="sf-conclusion-item">
+              <div class="sf-conclusion-icon">02</div>
+              <div class="sf-conclusion-text">Digital wallet, tierings, limit thresholds, and the application of best practices help avoid peak usage and keep credit consumption predictable and cost-efficient.</div>
+            </div>
+
+            <div class="sf-conclusion-item">
+              <div class="sf-conclusion-icon">03</div>
+              <div class="sf-conclusion-text">Start with a simple use case that brings clear, measurable value — early wins build internal confidence and establish the patterns for broader rollout.</div>
+            </div>
+
+            <div class="sf-conclusion-item">
+              <div class="sf-conclusion-icon">04</div>
+              <div class="sf-conclusion-text">A strong governance structure protects your data and facilitates implementation and maintenance — defining ownership, access policies, and data quality standards from day one.</div>
+            </div>
+          </div>
+
+          <!-- ── Right: Next Steps ── -->
+          <div class="sf-conclusion-right">
+            <div class="sf-conclusion-col-label">Next Steps</div>
+
+            <div class="sf-nextstep-item">
+              <div class="sf-nextstep-num">1</div>
+              <div class="sf-nextstep-text">Work with an implementation partner on the refinement of the initial use case — define scope, success metrics, and the data sources required to deliver value quickly.</div>
+            </div>
+
+            <div class="sf-nextstep-item">
+              <div class="sf-nextstep-num">2</div>
+              <div class="sf-nextstep-text">Identify what telemetry data needs to be sent in a streaming fashion — map event sources, latency requirements, and the triggers that will power real-time actions.</div>
+            </div>
+          </div>
+
         </div>
-        <div class="sf-body sf-columns">
-          <div class="sf-col">
-            <h4>Column One</h4>
-            <ul>
-              <li>First level point</li>
-              <li>Second level point</li>
-            </ul>
-          </div>
-          <div class="sf-col">
-            <h4>Column Two</h4>
-            <ul>
-              <li>First level point</li>
-              <li>Second level point</li>
-            </ul>
-          </div>
-          <div class="sf-col">
-            <h4>Column Three</h4>
-            <ul>
-              <li>First level point</li>
-              <li>Second level point</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sf-footer">Footer text | Confidential</div>
       </section>
 
       <!-- ============================================================
-           SLIDE TYPE: Vignette — full background image with content
-           Replace assets/image10.jpg with any of the vignette images
+           SLIDE 13: Thank You
            ============================================================ -->
-      <section class="sf-vignette" style="background-image: url('assets/image10.jpg');">
-        <div class="sf-vignette-overlay">
-          <div class="sf-vignette-content">
-            <h3>Vignette Slide Title</h3>
-            <p class="sf-subtitle">Subtitle placeholder</p>
-            <ul>
-              <li>First level text goes here</li>
-              <li>Second key point goes here</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sf-footer sf-footer-light">Footer text | Confidential</div>
-      </section>
-
-      <!-- ============================================================
-           SLIDE TYPE: Quote / Callout
-           ============================================================ -->
-      <section class="sf-callout">
-        <blockquote>
-          "This is a key quote or callout message that deserves visual emphasis."
-        </blockquote>
-        <cite>— Speaker Name, Title</cite>
-        <div class="sf-footer">Footer text | Confidential</div>
-      </section>
-
-      <!-- ============================================================
-           SLIDE TYPE: Closing / Thank You
-           ============================================================ -->
-      <section class="sf-title-a sf-closing">
-        <div class="sf-title-content">
-          <h1>Thank You</h1>
-          <h2>Questions?</h2>
-          <div class="sf-speaker">
-            <span class="sf-speaker-name">Name, Title</span>
-            <span class="sf-speaker-contact">@handle | email@company.com</span>
-          </div>
+      <section class="sf-thankyou">
+        <img src="assets/image2.png" class="sf-logo-sm" alt="Salesforce" />
+        <div class="sf-thankyou-main">
+          <h1>THANK YOU</h1>
         </div>
       </section>
 
@@ -167,6 +727,355 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
   <script>
+    /* ══ Data 360 Flex Credits Calculator v2 — spec 17-jun-2026 ══ */
+    const n = v => Math.round(v).toLocaleString('en-US');
+    const BP = [300000, 1500000, 12500000];          // tier breakpoints (credits)
+    const MULTS = {
+      prep:         { prod: [40, 32, 16, 8],              sb: 32 },
+      unification:  { prod: [75000, 60000, 30000, 15000], sb: 60000 },
+      segmentation: { prod: [50, 40, 20, 10],             sb: 40 },
+      activation:   { prod: [60, 48, 24, 12],             sb: 48 },
+      queries:      { prod: [3, 2.4, 1.2, 0.6],           sb: 2.4 },
+      streaming:    { prod: [3500, 2800, 1400, 700],       sb: 2800 },
+    };
+    const ULABELS = {
+      prep: 'Data Preparation', unification: 'Unification',
+      segmentation: 'Segmentation', activation: 'Activation',
+      queries: 'Queries', streaming: 'Streaming',
+    };
+
+    // Per-usage-type mutable params (updated by inline inputs)
+    const D360P = {
+      prep:         { freq: 12 },
+      unification:  { freq: 12 },
+      segmentation: { count: 1, refresh: 12 },
+      activation:   { size: null, freq: 12 },
+      queries:      { users: 100, perDay: 5, rowsPerQ: 1000000 },
+      streaming:    {},
+    };
+
+    const openFormulaRows = new Set();
+
+    function parseNum(v) { return parseFloat(String(v).replace(/,/g, '')) || 0; }
+    function gv(id, def) {
+      const el = document.getElementById(id);
+      if (!el) return def;
+      const v = parseFloat(String(el.value).replace(/,/g, ''));
+      return isNaN(v) ? def : v;
+    }
+
+    function tieredCredits(mu, mProd) {
+      let rem = mu, tot = 0, prev = 0;
+      for (let i = 0; i < BP.length; i++) {
+        const cap = (BP[i] - prev) / mProd[i];
+        const used = Math.min(rem, cap);
+        tot += used * mProd[i];
+        rem -= used; prev = BP[i];
+        if (rem <= 0) return tot;
+      }
+      return tot + rem * mProd[3];
+    }
+
+    function annualCredits(annRows, type, env) {
+      const mu = MULTS[type];
+      if (env === 'sandbox') return (annRows / 1e6) * mu.sb;
+      const mc = tieredCredits((annRows / 12) / 1e6, mu.prod);
+      return mc * 12;
+    }
+
+    function topTierLabel(mProd, monthlyUnits) {
+      let rem = monthlyUnits, prev = 0;
+      for (let i = 0; i < BP.length; i++) {
+        const cap = (BP[i] - prev) / mProd[i];
+        if (rem <= cap) return 'Tier ' + (i + 1) + ' (' + mProd[i] + '/M)';
+        rem -= cap; prev = BP[i];
+      }
+      return 'Tier 4 (' + mProd[3] + '/M)';
+    }
+    function tierNumber(mProd, monthlyUnits) {
+      let rem = monthlyUnits, prev = 0;
+      for (let i = 0; i < BP.length; i++) {
+        const cap = (BP[i] - prev) / mProd[i];
+        if (rem <= cap) return i + 1;
+        rem -= cap; prev = BP[i];
+      }
+      return 4;
+    }
+    function tierBreakdown(mProd, monthlyUnits) {
+      const bd = []; let rem = monthlyUnits, prev = 0;
+      for (let i = 0; i < BP.length; i++) {
+        const cap = (BP[i] - prev) / mProd[i];
+        const used = Math.min(rem, cap);
+        if (used > 0.0001) bd.push({ tier: i+1, mult: mProd[i], units: used, credits: used * mProd[i] });
+        rem -= used; prev = BP[i];
+        if (rem <= 0.0001) return bd;
+      }
+      if (rem > 0.0001) bd.push({ tier: 4, mult: mProd[3], units: rem, credits: rem * mProd[3] });
+      return bd;
+    }
+
+    function setParam(key, field, val) {
+      D360P[key][field] = parseFloat(val) || 0;
+      calcD360();
+    }
+
+    function buildInlineInputs(key, customers) {
+      const p = D360P[key];
+      function fi(field, label, val, note, step) {
+        return '<label class="sf-fi-label">' + label + (note ? ' <span class="sf-fi-note">' + note + '</span>' : '') + '</label>' +
+               '<input class="sf-fi-input" type="text" inputmode="numeric" value="' + val + '" onchange="setParam(\'' + key + '\',\'' + field + '\',this.value)">';
+      }
+      switch (key) {
+        case 'prep':        return fi('freq',    'Cycles / year', p.freq, '', 1);
+        case 'unification': return fi('freq',    'Cycles / year', p.freq, '', 1);
+        case 'segmentation':return fi('count',   'Segments', p.count, '⚠ assumption') +
+                                   fi('refresh', 'Refresh / año', p.refresh, '', 1);
+        case 'activation':  return fi('size',    'Audience size', p.size ?? customers, '', 1) +
+                                   fi('freq',    'Frequency / year', p.freq, '', 1);
+        case 'queries':     return fi('users',   'Users', p.users, '⚠ assumption') +
+                                   fi('perDay',  'Queries / user / day', p.perDay, '⚠ assumption') +
+                                   fi('rowsPerQ','Rows / query', p.rowsPerQ, '⚠ assumption');
+        case 'streaming':   return '<span class="sf-fi-note">Uses telemetry_daily × days/year from the main inputs</span>';
+        default:            return '';
+      }
+    }
+
+    function buildFormulaText(key, annRows, unified, profiles, related, telemetry, days) {
+      const fm = v => (v / 1e6).toLocaleString('en-US', {maximumFractionDigits: 1}) + 'M';
+      const p = D360P[key];
+      const actSize = p.size ?? unified;
+      switch (key) {
+        case 'prep':
+          return '(profiles + related_data) × freq = (' + fm(profiles) + ' + ' + fm(related) + ') × ' + p.freq + ' = <b>' + n(Math.round(annRows)) + ' rows/year</b>';
+        case 'unification':
+          return '(unified + profiles) × freq = (' + fm(unified) + ' + ' + fm(profiles) + ') × ' + p.freq + ' = <b>' + n(Math.round(annRows)) + ' rows/year</b>';
+        case 'segmentation':
+          return 'unified × segs × refresh = ' + fm(unified) + ' × ' + p.count + ' × ' + p.refresh + ' = <b>' + n(Math.round(annRows)) + ' rows/year</b>';
+        case 'activation':
+          return 'audience × freq = ' + fm(actSize) + ' × ' + p.freq + ' = <b>' + n(Math.round(annRows)) + ' rows/year</b>';
+        case 'queries':
+          return 'users × q/día × rows/q × días = ' + p.users + ' × ' + p.perDay + ' × ' + n(p.rowsPerQ) + ' × ' + days + ' = <b>' + n(Math.round(annRows)) + ' rows/year</b>';
+        case 'streaming':
+          return 'telemetry_daily × días = ' + fm(telemetry) + ' × ' + days + ' = <b>' + n(Math.round(annRows)) + ' rows/year</b>';
+        default: return '';
+      }
+    }
+
+    function calcD360() {
+      const customers  = gv('inp-customers',  1000000);
+      const sources    = gv('inp-sources',    5);
+      const related    = gv('inp-related',    158000000);
+      const telemetry  = gv('inp-telemetry',  80000000);
+      const env        = document.getElementById('inp-env')?.value || 'production';
+      const days       = 365;
+
+      const unified  = customers;
+      const profiles = customers * sources;
+      const totalDs  = unified + profiles + related;
+
+      // Derived display
+      const dd = document.getElementById('calc-derived');
+      if (dd) dd.innerHTML =
+        '<span>Unified profiles: <b>' + n(unified) + '</b></span>' +
+        '<span>Profiles: <b>' + n(profiles) + '</b></span>' +
+        '<span>Total dataset: <b>' + n(totalDs) + '</b></span>';
+
+      const actSize = D360P.activation.size ?? customers;
+
+      const rows = {
+        prep:        (profiles + related)                              * D360P.prep.freq,
+        unification: (unified + profiles)                              * D360P.unification.freq,
+        segmentation: unified * D360P.segmentation.count              * D360P.segmentation.refresh,
+        activation:  actSize                                           * D360P.activation.freq,
+        queries:     D360P.queries.users * D360P.queries.perDay * D360P.queries.rowsPerQ * days,
+        streaming:   telemetry                                        * days,
+      };
+
+      let totCred = 0;
+      const creds = {};
+      Object.keys(rows).forEach(k => { creds[k] = annualCredits(rows[k], k, env); totCred += creds[k]; });
+
+      const tbody = document.getElementById('calc-body');
+      tbody.innerHTML = '';
+
+      Object.keys(rows).forEach((key, idx) => {
+        const aR = rows[key], aC = creds[key];
+        const pct = totCred > 0 ? (aC / totCred * 100) : 0;
+        const mu  = (aR / 12) / 1e6;
+        const tNum  = env === 'sandbox' ? 1 : tierNumber(MULTS[key].prod, mu);
+        const tLabel = env === 'sandbox' ? 'Sandbox (no tiers)' : topTierLabel(MULTS[key].prod, mu);
+        const tier = (tNum >= 2 && env !== 'sandbox')
+          ? tLabel + ' <button class="sf-tier-detail-btn" onclick="showTierDetail(\''+key+'\','+aR+')">&#8505; detail</button>'
+          : tLabel;
+        const isOpen = openFormulaRows.has(idx);
+
+        const tr = document.createElement('tr');
+        tr.className = 'sf-calc-data-row';
+        tr.dataset.idx = idx;
+        tr.innerHTML =
+          '<td class="sf-calc-label-cell">' +
+            '<button class="sf-formula-toggle" onclick="toggleFormula(' + idx + ')">' + (isOpen ? '▼' : '▶') + '</button> ' +
+            ULABELS[key] +
+          '</td>' +
+          '<td class="sf-d360-num">' + n(Math.round(aR)) + '</td>' +
+          '<td class="sf-d360-credits">' + n(Math.round(aC)) + '</td>' +
+          '<td class="sf-d360-pct">' + pct.toFixed(1) + '%</td>';
+        tbody.appendChild(tr);
+
+        const fr = document.createElement('tr');
+        fr.className = 'sf-formula-row';
+        fr.id = 'formula-row-' + idx;
+        fr.style.display = isOpen ? 'table-row' : 'none';
+        fr.innerHTML = '<td colspan="4" class="sf-formula-cell">' +
+          '<div class="sf-fi-inputs">' + buildInlineInputs(key, customers) + '</div>' +
+          '<div class="sf-fi-formula"><span class="sf-formula-label">Formula:</span> ' +
+            buildFormulaText(key, aR, unified, profiles, related, telemetry, days) +
+          '&nbsp;|&nbsp;<span class="sf-formula-label">Tier reached:</span> ' + tier + '</div>' +
+        '</td>';
+        tbody.appendChild(fr);
+      });
+
+      document.getElementById('calc-total-credits').textContent = n(Math.round(totCred));
+    }
+
+    function toggleFormula(idx) {
+      const row = document.getElementById('formula-row-' + idx);
+      const btn = document.querySelector('[data-idx="' + idx + '"] .sf-formula-toggle');
+      if (!row) return;
+      const open = row.style.display === 'none';
+      row.style.display = open ? 'table-row' : 'none';
+      if (btn) btn.textContent = open ? '▼' : '▶';
+      if (open) openFormulaRows.add(idx); else openFormulaRows.delete(idx);
+    }
+
+
+    // ── Agentforce: Case Management ──────────────────────────────
+    var AF_CASE_DATA = [
+      { name: 'Conservative', cases: 50000, pct: 70, mileage: 8,  cpc: 0.15 },
+      { name: 'Moderate',     cases: 50000, pct: 80, mileage: 3,  cpc: 0.10 },
+      { name: 'Aggressive',   cases: 50000, pct: 50, mileage: 12, cpc: 0.20 },
+    ];
+    function afCaseCredits(s) { return s.cases * (s.pct / 100) * s.mileage * s.cpc; }
+    function updateAfCase() {
+      var tot = 0;
+      AF_CASE_DATA.forEach(function(s, i) {
+        var c = afCaseCredits(s); tot += c;
+        var el = document.getElementById('af-case-row-' + i);
+        if (el) el.textContent = n(Math.round(c));
+      });
+      var preview = document.getElementById('af-case-preview');
+      if (preview) preview.textContent = n(Math.round(tot)) + ' credits / year';
+    }
+    function initAfCase() {
+      var tbody = document.getElementById('af-case-body');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+      AF_CASE_DATA.forEach(function(s, i) {
+        var tr = document.createElement('tr');
+        tr.className = 'sf-af-detail';
+        tr.style.display = 'none';
+        tr.innerHTML =
+          '<td>' + s.name + '</td>' +
+          '<td><input type="text" inputmode="numeric" class="sf-af-input" value="' + s.cases + '" onchange="AF_CASE_DATA[' + i + '].cases=parseNum(this.value);updateAfCase()"></td>' +
+          '<td><input type="text" inputmode="numeric" class="sf-af-input sf-af-pct" value="' + s.pct + '" onchange="AF_CASE_DATA[' + i + '].pct=parseNum(this.value);updateAfCase()"></td>' +
+          '<td><input type="text" inputmode="numeric" class="sf-af-input sf-af-sm" value="' + s.mileage + '" onchange="AF_CASE_DATA[' + i + '].mileage=parseNum(this.value);updateAfCase()"></td>' +
+          '<td><input type="text" inputmode="numeric" class="sf-af-input sf-af-sm" value="' + s.cpc + '" onchange="AF_CASE_DATA[' + i + '].cpc=parseNum(this.value);updateAfCase()"></td>' +
+          '<td class="sf-af-cred-cell" id="af-case-row-' + i + '">—</td>';
+        tbody.appendChild(tr);
+      });
+      updateAfCase();
+    }
+
+    // ── Agentforce: FAQ Responses ─────────────────────────────────
+    var AF_FAQ_DATA = [
+      { name: 'Conservative', faqs: 200000, pct: 65, mileage: 2, cpc: 0.05 },
+      { name: 'Moderate',     faqs: 150000, pct: 55, mileage: 3, cpc: 0.07 },
+      { name: 'Aggressive',   faqs: 100000, pct: 40, mileage: 5, cpc: 0.12 },
+    ];
+    function afFaqCredits(s) { return s.faqs * (s.pct / 100) * s.mileage * s.cpc; }
+    function updateAfFaq() {
+      var tot = 0;
+      AF_FAQ_DATA.forEach(function(s, i) {
+        var c = afFaqCredits(s); tot += c;
+        var el = document.getElementById('af-faq-row-' + i);
+        if (el) el.textContent = n(Math.round(c));
+      });
+      var preview = document.getElementById('af-faq-preview');
+      if (preview) preview.textContent = n(Math.round(tot)) + ' credits / year';
+    }
+    function initAfFaq() {
+      var tbody = document.getElementById('af-faq-body');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+      AF_FAQ_DATA.forEach(function(s, i) {
+        var tr = document.createElement('tr');
+        tr.className = 'sf-af-detail';
+        tr.style.display = 'none';
+        tr.innerHTML =
+          '<td>' + s.name + '</td>' +
+          '<td><input type="text" inputmode="numeric" class="sf-af-input" value="' + s.faqs + '" onchange="AF_FAQ_DATA[' + i + '].faqs=parseNum(this.value);updateAfFaq()"></td>' +
+          '<td><input type="text" inputmode="numeric" class="sf-af-input sf-af-pct" value="' + s.pct + '" onchange="AF_FAQ_DATA[' + i + '].pct=parseNum(this.value);updateAfFaq()"></td>' +
+          '<td><input type="text" inputmode="numeric" class="sf-af-input sf-af-sm" value="' + s.mileage + '" onchange="AF_FAQ_DATA[' + i + '].mileage=parseNum(this.value);updateAfFaq()"></td>' +
+          '<td><input type="text" inputmode="numeric" class="sf-af-input sf-af-sm" value="' + s.cpc + '" onchange="AF_FAQ_DATA[' + i + '].cpc=parseNum(this.value);updateAfFaq()"></td>' +
+          '<td class="sf-af-cred-cell" id="af-faq-row-' + i + '">—</td>';
+        tbody.appendChild(tr);
+      });
+      updateAfFaq();
+    }
+
+    // ── Agentforce: toggle collapse ───────────────────────────────
+    function toggleAfSection(section) {
+      var table = document.getElementById('af-' + section + '-table');
+      var toggle = document.getElementById('af-' + section + '-toggle');
+      if (!table || !toggle) return;
+      var isOpen = toggle.textContent === '▼';
+      table.querySelectorAll('.sf-af-detail').forEach(function(el) {
+        el.style.display = isOpen ? 'none' : '';
+      });
+      toggle.textContent = isOpen ? '▶' : '▼';
+    }
+
+    function showTierDetail(key, annRows) {
+      const mu = MULTS[key].prod;
+      const muM = (annRows / 12) / 1e6;
+      const bd  = tierBreakdown(mu, muM);
+      const totM = bd.reduce(function(s,r){return s+r.credits;},0);
+      const fmt2 = function(v){return v < 10 ? v.toFixed(2) : v < 1000 ? v.toFixed(1) : n(Math.round(v));};
+      var rows = bd.map(function(r){
+        return '<tr><td>Tier '+r.tier+'</td><td>'+r.mult+' /M</td>' +
+               '<td>'+fmt2(r.units)+' M</td><td>'+n(Math.round(r.credits))+'</td></tr>';
+      }).join('');
+      rows += '<tr class="sf-tier-total"><td colspan="2"><b>Monthly total</b></td>' +
+              '<td>'+fmt2(muM)+' M</td><td><b>'+n(Math.round(totM))+'</b></td></tr>';
+      rows += '<tr class="sf-tier-total"><td colspan="3"><b>× 12 months = Annual credits</b></td>' +
+              '<td><b>'+n(Math.round(totM*12))+'</b></td></tr>';
+      document.getElementById('tier-modal-title').textContent = ULABELS[key] + ' — Tier Breakdown';
+      document.getElementById('tier-modal-body').innerHTML =
+        '<table class="sf-tier-table"><thead><tr>' +
+        '<th>Tier</th><th>Rate</th><th>Volume / month</th><th>Credits / month</th>' +
+        '</tr></thead><tbody>' + rows + '</tbody></table>' +
+        '<p class="sf-tier-note">Monthly units = (annual rows ÷ 12) ÷ 1,000,000. Tiers are applied per month, then multiplied × 12.</p>';
+      document.getElementById('tier-modal').style.display = 'flex';
+    }
+    function closeTierModal() {
+      document.getElementById('tier-modal').style.display = 'none';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      calcD360();
+      initAfCase();
+      initAfFaq();
+    });
+
+    function toggleDataTable() {
+      const table = document.getElementById('bridgeDataTable');
+      const icon  = table.querySelector('.sf-toggle-icon');
+      const isCollapsed = table.classList.contains('sf-collapsed');
+      table.classList.toggle('sf-collapsed', !isCollapsed);
+      table.classList.toggle('sf-expanded',   isCollapsed);
+      icon.textContent = isCollapsed ? '▼' : '▶';
+    }
+
     Reveal.initialize({
       hash: true,
       width: 1280,
@@ -179,5 +1088,16 @@
       backgroundTransition: 'fade',
     });
   </script>
+
+  <!-- ── Tier Breakdown Modal ── -->
+  <div id="tier-modal" class="sf-tier-modal" onclick="closeTierModal()">
+    <div class="sf-tier-modal-box" onclick="event.stopPropagation()">
+      <div class="sf-tier-modal-head">
+        <span id="tier-modal-title">Tier Breakdown</span>
+        <button class="sf-tier-modal-close" onclick="closeTierModal()">&#x2715;</button>
+      </div>
+      <div id="tier-modal-body"></div>
+    </div>
+  </div>
 </body>
 </html>

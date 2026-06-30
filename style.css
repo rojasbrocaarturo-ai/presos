@@ -41,100 +41,1882 @@
 }
 
 /* ============================================================
-   TITLE SLIDE A  — dark blue-green background
+   TITLE SLIDE A  — Salesforce blue background
    ============================================================ */
 .reveal .sf-title-a {
-  background: linear-gradient(135deg, #032D60 0%, #0070D2 60%, var(--sf-green-dark) 100%);
+  background: #032D60;
   color: var(--sf-white);
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  padding: 80px 100px;
+  padding: 48px 64px 56px;
   position: relative;
   overflow: hidden;
 }
 
+/* subtle circle decoration bottom-right */
 .reveal .sf-title-a::before {
   content: '';
   position: absolute;
-  bottom: -60px;
-  right: -60px;
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.06);
-}
-
-.reveal .sf-title-a::after {
-  content: '';
-  position: absolute;
-  bottom: 60px;
-  right: 100px;
-  width: 220px;
-  height: 220px;
+  bottom: -80px;
+  right: -80px;
+  width: 480px;
+  height: 480px;
   border-radius: 50%;
   background: rgba(255,255,255,0.04);
+  pointer-events: none;
 }
 
-.sf-title-content {
-  max-width: 60%;
+/* Salesforce logo — top right */
+.sf-logo {
+  position: absolute;
+  top: 40px;
+  right: 64px;
+  width: 130px;
+  z-index: 2;
+}
+
+/* Title + speaker stacked and centered */
+.sf-title-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
   z-index: 1;
+  width: 100%;
 }
 
 .reveal .sf-title-a h1 {
-  font-size: 2.6em;
+  font-size: 2.8em;
   font-weight: 700;
   color: var(--sf-white);
-  margin: 0 0 16px 0;
-  line-height: 1.15;
+  margin: 0;
+  line-height: 1.2;
   text-shadow: none;
   text-transform: none;
+  text-align: center;
 }
 
-.reveal .sf-title-a h2 {
-  font-size: 1.3em;
-  font-weight: 400;
-  color: rgba(255,255,255,0.85);
-  margin: 0 0 48px 0;
-  text-transform: none;
-}
-
+/* Speaker block — centered below title */
 .sf-speaker {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  border-top: 1px solid rgba(255,255,255,0.3);
+  align-items: center;
+  gap: 6px;
+  border-top: 1px solid rgba(255,255,255,0.25);
   padding-top: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
 }
 
 .sf-speaker-name {
-  font-size: 0.85em;
-  font-weight: 600;
+  font-size: 1.05em;
+  font-weight: 700;
   color: var(--sf-white);
+}
+
+.sf-speaker-role {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: rgba(255,255,255,0.85);
 }
 
 .sf-speaker-contact {
-  font-size: 0.75em;
-  color: rgba(255,255,255,0.7);
+  font-size: 0.85em;
+  color: rgba(255,255,255,0.65);
 }
 
 /* ============================================================
-   SEGUE / SECTION DIVIDER
+   SLIDE 7 — VALUE ALIGNMENT GRID
    ============================================================ */
-.reveal .sf-segue {
-  background: var(--sf-green-dark);
-  color: var(--sf-white);
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 60px;
+.reveal .sf-value-slide {
+  background: #FFFFFF;
+  flex-direction: column;
+  padding: 0;
 }
 
-.reveal .sf-segue h2 {
+.sf-value-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1.5fr 1.6fr;
+  gap: 0;
+  padding: 24px 40px 20px;
+  overflow: hidden;
+}
+
+/* Column wrapper */
+.sf-vg-col {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  border-right: 1px solid #E8ECF0;
+}
+.sf-vg-col:first-child { padding-left: 0; }
+.sf-vg-col:last-child  { border-right: none; padding-right: 0; }
+
+/* Column header */
+.sf-vg-header {
+  font-size: 0.80em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #032D60;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #0070D2;
+}
+
+.sf-vg-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Strategy pills ── */
+.sf-strategy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px 8px;
+  font-size: 0.90em;
+  font-weight: 900;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+  flex: 1;
+  margin-bottom: 10px;
+}
+.sf-strategy:last-child { margin-bottom: 0; }
+
+.sf-strategy-revenue {
+  background: linear-gradient(135deg, #0070D2, #032D60);
+  flex: 3;
+}
+.sf-strategy-cs {
+  background: linear-gradient(135deg, #1A9046, #0A4A22);
+  flex: 2;
+}
+
+/* ── Objective groups ── */
+.sf-obj-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 3;
+  padding: 4px 0;
+  margin-bottom: 10px;
+  border-left: 3px solid #0070D2;
+  padding-left: 14px;
+}
+.sf-obj-group-cs {
+  flex: 2;
+  border-left-color: #1A9046;
+  margin-bottom: 0;
+}
+
+.sf-obj-item {
+  font-size: 0.88em;
+  font-weight: 600;
+  color: #1A2B45;
+  line-height: 1.35;
+  padding: 3px 0;
+}
+
+/* ── Capability list ── */
+.sf-cap-list {
+  justify-content: space-around;
+}
+
+.sf-cap-item {
+  font-size: 0.84em;
+  color: #2B3D55;
+  line-height: 1.35;
+  padding: 4px 0 4px 16px;
+  position: relative;
+  border-bottom: 1px solid #F0F2F5;
+}
+.sf-cap-item:last-child { border-bottom: none; }
+
+.sf-cap-item::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  font-size: 0.55em;
+  color: #0070D2;
+  top: 7px;
+}
+
+/* ── KPI list ── */
+.sf-kpi-list {
+  justify-content: space-around;
+}
+
+.sf-kpi-item {
+  font-size: 0.84em;
+  font-weight: 600;
+  color: #1A2B45;
+  line-height: 1.35;
+  padding: 4px 0 4px 28px;
+  position: relative;
+  border-bottom: 1px solid #F0F2F5;
+}
+.sf-kpi-item:last-child { border-bottom: none; }
+
+/* Arrow indicators — both up and down in green as requested */
+.sf-kpi-item::before {
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+  font-weight: 900;
+  line-height: 1;
+  top: 4px;
+}
+
+.sf-kpi-up::before {
+  content: '↑';
+  color: #1A9046;
+}
+
+.sf-kpi-down::before {
+  content: '↓';
+  color: #1A9046;
+}
+
+/* ============================================================
+   BROKEN BRIDGE SLIDE
+   ============================================================ */
+.reveal .sf-bridge-slide {
+  background: #010F2E;
+  padding: 0;
+  overflow: hidden;
+  position: relative !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.sf-bridge-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Slide title — top bar that bleeds from left */
+.sf-slide-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 36px;
+  font-size: 1.1em;
+  font-weight: 900;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  background: linear-gradient(
+    to right,
+    rgba(2, 8, 20, 0.85) 0%,
+    rgba(2, 8, 20, 0.60) 55%,
+    rgba(2, 8, 20, 0.00) 100%
+  );
+  z-index: 3;
+}
+
+/* Panel: gradient that bleeds out of the forest darkness naturally */
+.sf-data-panel {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 50%;
+  padding: 28px 52px 28px 32px;
+  z-index: 2;
+  background: linear-gradient(
+    to right,
+    rgba(2, 8, 20, 0.88) 0%,
+    rgba(2, 8, 20, 0.78) 60%,
+    rgba(2, 8, 20, 0.00) 100%
+  );
+}
+
+/* Left legend above icons */
+.sf-panel-legend {
+  font-size: 0.95em !important;
+  font-style: italic !important;
+  font-weight: 600 !important;
+  color: #FFFFFF !important;
+  margin: 0 0 16px 0 !important;
+  line-height: 1.35 !important;
+  text-shadow: 0 1px 8px rgba(0,0,0,1) !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* Right tagline box */
+.sf-right-tagline {
+  position: absolute;
+  right: 3%;
+  top: 35%;
+  width: 21%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 12px 14px;
+  z-index: 3;
+  pointer-events: none;
+  background: rgba(2, 8, 20, 0.35);
+}
+
+.sf-right-tagline p {
+  font-size: 0.92em;
+  font-style: italic;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 1.45;
+  margin: 0;
+  text-shadow: 0 1px 8px rgba(0,0,0,1);
+}
+
+/* ── Source icons row ── */
+.sf-source-icons {
+  display: flex;
+  gap: 18px;
+  align-items: flex-end;
+  margin-bottom: 18px;
+  padding-left: 4px;
+}
+
+.sf-source-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.sf-source-icon svg {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.8));
+}
+
+.sf-source-icon span {
+  font-size: 0.52em;
+  font-weight: 700;
+  color: rgba(255,255,255,0.80);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-shadow: 0 1px 6px rgba(0,0,0,1);
+  white-space: nowrap;
+}
+
+/* ── Table ── */
+.sf-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84em;
+  color: #FFFFFF;
+}
+
+/* Header */
+.sf-data-table thead tr th {
+  text-align: left;
+  padding: 0 12px 8px;
+  font-weight: 900;
+  color: #FFFFFF;
+  font-size: 0.78em;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+  white-space: nowrap;
+}
+
+.sf-data-table th:nth-child(2) { text-align: right; }
+
+/* Body rows — dot accent via ::before on first cell */
+.sf-data-table tbody tr td {
+  padding: 4px 12px;
+  border-bottom: none;
+  vertical-align: middle;
+  line-height: 1.3;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+/* Dot bullet before each row's first cell */
+.sf-data-table tbody tr td:first-child {
+  padding-left: 20px;
+  position: relative;
+}
+
+.sf-data-table tbody tr td:first-child::before {
+  content: '●';
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.45em;
+  color: #24CBE5;
+  line-height: 1;
+}
+
+/* Alternate dot color every other row */
+.sf-data-table tbody tr:nth-child(even) td:first-child::before {
+  color: #50B432;
+}
+
+/* Volume column */
+.sf-data-table tbody td:nth-child(2) {
+  text-align: right;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Source column */
+.sf-data-table tbody td:nth-child(3) {
+  white-space: nowrap;
+  opacity: 0.80;
+}
+
+/* Asterisk */
+.sf-data-table sup {
+  color: #EDEF00;
+  font-weight: 900;
+  font-size: 0.75em;
+  margin-left: 1px;
+}
+
+/* Thin separator between rows */
+.sf-data-table tbody tr + tr td {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Collapsed: hide detail rows */
+.sf-data-table.sf-collapsed tbody {
+  display: none;
+}
+
+/* ── Totals / tfoot ── */
+.sf-totals-row {
+  cursor: pointer;
+}
+
+.sf-totals-row td {
+  padding: 8px 12px 4px !important;
+  font-weight: 900 !important;
+  font-size: 1em !important;
+  color: #FFFFFF !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.22) !important;
+  border-bottom: none !important;
+  letter-spacing: 0.03em;
+}
+
+.sf-totals-row td:nth-child(2) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.sf-total-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding-left: 8px;
+}
+
+.sf-toggle-icon {
+  font-size: 0.6em;
+  color: #24CBE5;
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.sf-totals-row:hover .sf-toggle-icon {
+  color: #70E8FF;
+}
+
+/* Floating objectives — right side of bridge */
+.sf-bridge-objectives {
+  position: absolute;
+  right: 3%;
+  top: 48%;
+  bottom: 12%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.sf-bridge-objectives span {
+  font-size: 0.80em;
+  font-weight: 900;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  text-align: center;
+  line-height: 1.25;
+  text-shadow:
+    0 0 12px rgba(0, 0, 0, 1),
+    0 0 24px rgba(0, 0, 0, 0.9),
+    0 2px 4px rgba(0, 0, 0, 1);
+}
+
+/* Floating challenges — center over the broken bridge, spread top to bottom */
+.sf-bridge-challenges {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  bottom: 12%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.sf-bridge-challenges span {
+  font-size: 0.82em;
+  font-weight: 900;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow:
+    0 0 12px rgba(0, 0, 0, 1),
+    0 0 24px rgba(0, 0, 0, 0.9),
+    0 2px 4px rgba(0, 0, 0, 1);
+}
+
+/* Alternate a subtle cyan tint on every other item for rhythm */
+.sf-bridge-challenges span:nth-child(odd) {
+  color: #FFFFFF;
+}
+
+.sf-bridge-challenges span:nth-child(even) {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* "AI Fails" stands out slightly larger */
+.sf-bridge-challenges span:last-child {
+  font-size: 1em;
+  color: #FFFFFF;
+  margin-top: 4px;
+}
+
+/* Assumption footnote — bottom right, outside table */
+.sf-assumption {
+  position: absolute !important;
+  bottom: 14px !important;
+  right: 20px !important;
+  margin: 0 !important;
+  padding: 5px 10px !important;
+  border-top: none !important;
+  font-size: 0.52em !important;
+  color: #EDEF00 !important;
+  line-height: 1.4 !important;
+  text-align: right !important;
+  text-shadow: 0 1px 6px rgba(0,0,0,1) !important;
+  z-index: 3;
+}
+
+.sf-assumption sup {
+  color: #EDEF00;
+  font-weight: 700;
+}
+
+/* ============================================================
+   ARCHITECTURE SLIDE
+   ============================================================ */
+.reveal .sf-arch-slide {
+  background: #FEF9E7;
+  padding: 0;
+  flex-direction: column;
+}
+
+.sf-arch-title {
+  background: #032D60;
+  color: #FFFFFF;
+  font-size: 1.1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  padding: 16px 36px;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.sf-arch-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 12px 16px;
+}
+
+.sf-arch-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ── Hotspot system for future architecture ── */
+.sf-arch-body {
+  position: relative;
+}
+
+/* Invisible clickable zone over Data 360 Home Org.
+   Coordinates relative to the rendered SVG within the body container.
+   SVG aspect 1.121 is pillarboxed in the container — adjust left/width if needed. */
+.sf-hotspot {
+  position: absolute;
+  /* position relative to .sf-arch-body */
+  left: 38%;
+  top:  57%;
+  width: 18%;
+  height: 20%;
+  cursor: pointer;
+  z-index: 10;
+  /* Uncomment the line below to see the hotspot boundary while tuning: */
+  /* outline: 2px dashed red; */
+}
+
+/* Tooltip panel */
+.sf-tooltip {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 420px;
+  background: rgba(3, 45, 96, 0.97);
+  border: 1px solid #24CBE5;
+  border-radius: 6px;
+  padding: 16px 18px;
+  pointer-events: none;
+  z-index: 20;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.55);
+}
+
+.sf-hotspot:hover .sf-tooltip {
+  display: block;
+}
+
+.sf-tooltip-title {
+  font-size: 0.78em;
+  font-weight: 900;
+  color: #24CBE5;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 10px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(36,203,229,0.35);
+}
+
+.sf-tooltip ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.sf-tooltip li {
+  font-size: 0.65em;
+  color: #FFFFFF;
+  line-height: 1.45;
+  padding-left: 12px;
+  position: relative;
+}
+
+.sf-tooltip li::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: #24CBE5;
+  font-size: 0.7em;
+  top: 3px;
+}
+
+.sf-tooltip li strong {
+  color: #70E8FF;
+}
+
+/* ============================================================
+   PDF SLIDE
+   ============================================================ */
+.reveal .sf-pdf-slide {
+  background: #f5f5f5;
+  flex-direction: column;
+  padding: 0;
+}
+
+.sf-pdf-body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.sf-pdf-embed {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ============================================================
+   CALCULATOR SLIDE
+   ============================================================ */
+.reveal .sf-calc-slide {
+  background: #F8FAFC;
+  flex-direction: column;
+  padding: 0;
+}
+
+.sf-calc-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px 16px;
+  gap: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #C0CCDC #F0F4FA;
+  min-height: 0;
+}
+
+/* Input row */
+.sf-calc-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.sf-calc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 140px;
+}
+
+.sf-calc-field label {
+  font-size: 0.60em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #032D60;
+}
+
+.sf-calc-field input,
+.sf-calc-field select {
+  font-family: var(--sf-font);
+  font-size: 0.72em;
+  color: #032D60;
+  background: #FFFFFF;
+  border: 1.5px solid #D0DCF0;
+  border-radius: 5px;
+  padding: 7px 10px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.sf-calc-field input:focus,
+.sf-calc-field select:focus {
+  border-color: #0070D2;
+}
+
+/* Results table wrapper — natural height, body handles scroll */
+.sf-calc-results {
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+/* D360 table: own scrollable area with sticky header */
+.sf-calc-results:not(.sf-af-block) {
+  overflow-y: auto;
+  max-height: 200px;
+  border: 1px solid #D0DCF0;
+  border-radius: 6px;
+}
+.sf-calc-results:not(.sf-af-block) .sf-calc-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.sf-calc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82em;
+}
+
+.sf-calc-table thead th {
+  background: #032D60;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 10px 18px;
+  text-align: left;
+}
+
+.sf-calc-table thead th:nth-child(2),
+.sf-calc-table thead th:nth-child(3),
+.sf-calc-table thead th:nth-child(4),
+.sf-calc-table thead th:nth-child(5) {
+  text-align: right;
+}
+
+.sf-calc-table tbody tr {
+  border-bottom: 1px solid #E8EDF5;
+  transition: background 0.15s;
+}
+
+.sf-calc-table tbody tr:hover {
+  background: #EEF4FF;
+}
+
+.sf-calc-table tbody td {
+  padding: 8px 14px;
+  color: #1A2B45;
+  font-weight: 500;
+  font-size: 0.90em;
+}
+
+/* D360 specific column styles */
+.sf-d360-num {
+  text-align: right !important;
+  font-variant-numeric: tabular-nums;
+  color: #4A5568 !important;
+  font-weight: 500 !important;
+}
+.sf-d360-credits {
+  text-align: right !important;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700 !important;
+  color: #032D60 !important;
+  background: #EEF4FF;
+}
+.sf-d360-cost {
+  text-align: right !important;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700 !important;
+  color: #158158 !important;
+}
+.sf-d360-pct {
+  text-align: right !important;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600 !important;
+  color: #0070D2 !important;
+  font-size: 0.85em !important;
+}
+
+.sf-calc-total-row td {
+  background: #032D60;
+  color: #FFFFFF !important;
+  font-weight: 900 !important;
+  font-size: 1em;
+  padding: 11px 18px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.sf-calc-total-row td:nth-child(3),
+.sf-calc-total-row td:nth-child(4),
+.sf-calc-total-row td:nth-child(5) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: #24CBE5 !important;
+}
+
+/* Derived values strip */
+.sf-calc-derived {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+  padding: 5px 4px;
+  font-size: 0.62em;
+  color: #4A5568;
+}
+.sf-calc-derived span { white-space: nowrap; }
+.sf-calc-derived b { color: #032D60; }
+
+/* Inline inputs inside formula expand rows */
+.sf-fi-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  align-items: center;
+  margin-bottom: 7px;
+}
+.sf-fi-label {
+  font-size: 0.78em;
+  font-weight: 600;
+  color: #2B3D55;
+  white-space: nowrap;
+}
+.sf-fi-input {
+  font-family: var(--sf-font);
+  font-size: 0.82em;
+  color: #032D60;
+  background: #FFFFFF;
+  border: 1.5px solid #B8CFF0;
+  border-radius: 4px;
+  padding: 3px 7px;
+  width: 110px;
+  text-align: right;
+  outline: none;
+}
+.sf-fi-input:focus { border-color: #0070D2; }
+.sf-fi-note {
+  font-size: 0.80em;
+  color: #E07800;
+  font-weight: 600;
+  font-style: normal;
+}
+.sf-fi-formula {
+  font-size: 0.72em;
+  color: #2B3D55;
+  line-height: 1.5;
+  padding-top: 4px;
+  border-top: 1px dashed #D0DCF0;
+}
+
+/* ── Unification tier breakdown tooltip ── */
+.sf-has-tier-tooltip {
+  position: relative;
+}
+
+.sf-tier-tooltip {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 12px;
+  width: 480px;
+  background: #032D60;
+  border: 1px solid #24CBE5;
+  border-radius: 8px;
+  padding: 14px 16px;
+  z-index: 100;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.55);
+  pointer-events: none;
+}
+
+.sf-has-tier-tooltip:hover .sf-tier-tooltip {
+  display: block;
+}
+
+.sf-tier-tooltip-title {
+  font-size: 0.72em;
+  font-weight: 900;
+  color: #24CBE5;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(36,203,229,0.30);
+}
+
+.sf-tier-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.70em;
+  color: #FFFFFF;
+}
+
+.sf-tier-table th {
+  text-align: left;
+  font-weight: 700;
+  color: #24CBE5;
+  padding: 4px 8px;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.sf-tier-table th:nth-child(2),
+.sf-tier-table th:nth-child(3),
+.sf-tier-table th:nth-child(4) { text-align: right; }
+
+.sf-tier-table tbody td {
+  padding: 5px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.sf-tier-table tbody td:nth-child(2),
+.sf-tier-table tbody td:nth-child(3),
+.sf-tier-table tbody td:nth-child(4) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.sf-tier-table tbody td:nth-child(4) {
+  color: #70E8FF;
+  font-weight: 600;
+}
+
+.sf-tier-table tfoot td {
+  padding: 6px 8px;
+  border-top: 1px solid rgba(36,203,229,0.40);
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.sf-tier-table tfoot td:nth-child(2),
+.sf-tier-table tfoot td:nth-child(4) {
+  text-align: right;
+  color: #24CBE5;
+  font-variant-numeric: tabular-nums;
+}
+
+.sf-tier-table tfoot td:nth-child(3) {
+  text-align: right;
+}
+
+.sf-tier-note {
+  font-size: 0.62em;
+  color: rgba(255,255,255,0.55);
+  margin: 8px 0 0;
+  line-height: 1.5;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+}
+
+/* Formula toggle button */
+.sf-calc-label-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sf-formula-toggle {
+  background: none;
+  border: 1px solid #C0CCDC;
+  border-radius: 3px;
+  color: #0070D2;
+  font-size: 0.65em;
+  padding: 1px 5px;
+  cursor: pointer;
+  line-height: 1.4;
+  flex-shrink: 0;
+  font-family: var(--sf-font);
+  transition: background 0.15s;
+}
+
+.sf-formula-toggle:hover {
+  background: #E8F0FF;
+}
+
+/* Expandable formula row */
+.sf-formula-row td.sf-formula-cell {
+  background: #F0F6FF;
+  color: #2B3D55;
+  font-size: 0.72em;
+  padding: 8px 18px 8px 40px !important;
+  line-height: 1.6;
+  border-bottom: 1px solid #D0DCF0;
+  text-align: left !important;
+  font-weight: 400 !important;
+}
+
+.sf-formula-cell b {
+  color: #032D60;
+  font-weight: 700;
+}
+
+.sf-formula-label {
+  color: #0070D2;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  letter-spacing: 0.04em;
+}
+
+/* ── Agentforce section within calc slide ── */
+.sf-calc-section-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.75em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: #032D60;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+.sf-calc-section-divider::before,
+.sf-calc-section-divider::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, #032D60 0%, rgba(3,45,96,0.15) 100%);
+  border-radius: 1px;
+}
+.sf-calc-section-divider::after {
+  background: linear-gradient(90deg, rgba(3,45,96,0.15) 0%, #032D60 100%);
+}
+
+.sf-calc-sub-label {
+  display: none; /* replaced by in-table summary rows */
+}
+
+/* ── Summary (collapsed) row inside AF tables ── */
+.sf-af-summary-row {
+  cursor: pointer;
+  user-select: none;
+  background: #E8F0FB;
+  border-bottom: 2px solid #B8CFF0;
+  transition: background 0.15s;
+}
+.sf-af-summary-row:hover { background: #D5E5FF; }
+
+.sf-af-summary-cell {
+  padding: 9px 14px !important;
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.80em;
+  color: #032D60;
+}
+
+.sf-af-summary-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+
+.sf-af-summary-totals {
+  font-weight: 600;
+  color: #0070D2;
+  font-variant-numeric: tabular-nums;
+  margin-left: 4px;
+}
+
+/* Column header row that appears on expand */
+.sf-af-col-header-row th {
+  background: #4A7FC0;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.80em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 7px 12px;
+  text-align: left;
+}
+.sf-af-col-header-row th:nth-child(2),
+.sf-af-col-header-row th:nth-child(3),
+.sf-af-col-header-row th:nth-child(4),
+.sf-af-col-header-row th:nth-child(5) { text-align: center; }
+.sf-af-col-header-row th:nth-child(6),
+.sf-af-col-header-row th:nth-child(7) { text-align: right; }
+
+/* Formula footer row */
+.sf-af-formula-foot {
+  background: #F0F6FF;
+  color: #2B3D55;
+  font-size: 0.72em;
+  padding: 7px 14px !important;
+  line-height: 1.6;
+  border-top: 1px solid #C8D8F0;
+  text-align: left !important;
+}
+.sf-af-block { flex-shrink: 0; margin-bottom: 2px; }
+
+.sf-credit-price-wrap {
+  font-size: 0.88em;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #4A5568;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sf-credit-price-wrap input {
+  font-family: var(--sf-font);
+  font-size: 1em;
+  color: #032D60;
+  background: #FFFFFF;
+  border: 1.5px solid #D0DCF0;
+  border-radius: 4px;
+  padding: 3px 7px;
+  width: 72px;
+  outline: none;
+}
+
+/* Override D360-specific nth-child column styles for AF tables */
+.sf-af-table tbody td:nth-child(2) {
+  background: transparent !important;
+  color: #1A2B45 !important;
+  font-weight: 400 !important;
+  text-align: left !important;
+}
+.sf-af-table tbody td:nth-child(3),
+.sf-af-table tbody td:nth-child(4),
+.sf-af-table tbody td:nth-child(5) {
+  text-align: center !important;
+  font-weight: 400 !important;
+  color: #1A2B45 !important;
+}
+.sf-af-table thead th:nth-child(2),
+.sf-af-table thead th:nth-child(3),
+.sf-af-table thead th:nth-child(4),
+.sf-af-table thead th:nth-child(5) {
+  text-align: center !important;
+}
+.sf-af-table thead th:nth-child(6),
+.sf-af-table thead th:nth-child(7) {
+  text-align: right !important;
+}
+
+/* Inline inputs inside Agentforce table cells */
+.sf-af-input {
+  font-family: var(--sf-font);
+  font-size: 0.88em;
+  color: #032D60;
+  background: #F5F8FF;
+  border: 1.5px solid #C8D8F0;
+  border-radius: 4px;
+  padding: 3px 6px;
+  width: 100px;
+  text-align: right;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.sf-af-input:focus { border-color: #0070D2; }
+.sf-af-input.sf-af-pct { width: 48px; }
+.sf-af-input.sf-af-sm  { width: 56px; }
+
+.sf-af-pct-cell {
+  white-space: nowrap;
+}
+
+/* Total and Price result cells in AF tables */
+.sf-af-total {
+  text-align: right !important;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700 !important;
+  color: #032D60 !important;
+  background: #EEF4FF !important;
+  min-width: 120px;
+}
+.sf-af-price {
+  text-align: right !important;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700 !important;
+  color: #158158 !important;
+  background: #F0FFF6 !important;
+}
+
+/* Tighter row padding for AF tables */
+.sf-af-table thead th {
+  padding: 7px 12px;
+}
+.sf-af-table tbody td {
+  padding: 6px 12px;
+}
+
+/* ============================================================
+   SLIDE 11 — SUCCESS STORY
+   ============================================================ */
+.reveal .sf-success-slide {
+  background: #F0F5FF;
+  flex-direction: column;
+  padding: 0;
+}
+
+.sf-success-body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* ── Left panel ── */
+.sf-success-left {
+  width: 66.66%;
+  padding: 18px 28px 18px 40px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #C0CCDC #F0F4FA;
+  border-right: 2px solid #D0DCF0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #FFFFFF;
+}
+
+.sf-success-headline {
+  font-size: 0.88em;
+  font-weight: 700;
+  color: #032D60;
+  line-height: 1.4;
+  font-style: italic;
+  border-left: 4px solid #0070D2;
+  padding-left: 12px;
+}
+
+.sf-success-section-label {
+  font-size: 0.60em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: #0070D2;
+  margin-top: 4px;
+  margin-bottom: -6px;
+}
+
+/* Stats grid */
+.sf-success-stats {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sf-success-stat {
+  background: #032D60;
+  border-radius: 8px;
+  padding: 12px 16px;
+  flex: 1;
+  min-width: 110px;
+  text-align: center;
+}
+
+.sf-success-stat-wide {
+  flex: 1.6;
+}
+
+.sf-success-stat-number {
+  font-size: 1.30em;
+  font-weight: 900;
+  color: #24CBE5;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.sf-success-stat-label {
+  font-size: 0.58em;
+  color: rgba(255,255,255,0.80);
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+/* Quote */
+.sf-success-quote {
+  display: flex;
+  gap: 10px;
+  background: #EEF4FF;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.sf-success-quote-mark {
   font-size: 2.4em;
+  font-weight: 900;
+  color: #0070D2;
+  line-height: 0.8;
+  flex-shrink: 0;
+}
+
+.sf-success-quote-body {
+  font-size: 0.68em;
+  color: #1A2B45;
+  line-height: 1.55;
+  font-style: italic;
+}
+
+.sf-success-quote-attr {
+  font-size: 0.85em;
+  font-weight: 700;
+  font-style: normal;
+  color: #0070D2;
+  margin-top: 6px;
+}
+
+/* Products */
+.sf-success-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.sf-success-product {
+  background: #E8F0FF;
+  color: #032D60;
+  font-size: 0.62em;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid #B8CFF0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Challenge text */
+.sf-success-challenge {
+  font-size: 0.68em;
+  color: #2B3D55;
+  line-height: 1.6;
+}
+
+/* ── Right panel: page preview ── */
+.sf-success-right {
+  width: 33.34%;
+  display: flex;
+  flex-direction: column;
+  background: #1A1A2E;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Two-story layout: both panels side by side */
+.sf-two-stories .sf-success-left {
+  width: 50%;
+}
+
+.sf-two-stories .sf-success-right {
+  width: 50%;
+  background: #F8F4FF;
+  padding: 18px 40px 18px 28px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #C0CCDC #F0F4FA;
+  flex-direction: column;
+  gap: 14px;
+  position: static;
+  overflow: auto;
+  border-left: 2px solid #D0DCF0;
+}
+
+/* Three-story layout: three equal columns */
+.sf-three-stories .sf-success-left {
+  width: 33.33%;
+}
+
+.sf-three-stories .sf-success-right {
+  width: 33.33%;
+  background: #F8F4FF;
+  padding: 18px 20px 18px 20px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #C0CCDC #F0F4FA;
+  flex-direction: column;
+  gap: 10px;
+  position: static;
+  overflow: auto;
+  border-left: 2px solid #D0DCF0;
+}
+
+.sf-success-third {
+  width: 33.33%;
+  padding: 18px 28px 18px 20px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #C0CCDC #F0F4FA;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #F0FFF8;
+  border-left: 2px solid #D0DCF0;
+}
+
+/* Tighten spacing in three-column mode */
+.sf-three-stories .sf-success-left {
+  padding: 18px 20px 18px 28px;
+  gap: 10px;
+}
+
+.sf-three-stories .sf-success-stat-number {
+  font-size: 1.10em;
+}
+
+.sf-three-stories .sf-success-headline {
+  font-size: 0.78em;
+}
+
+.sf-story-logo-wrap {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #D0DCF0;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.sf-story-logo {
+  display: block;
+  max-height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.sf-story-logo-fedex {
+  max-height: 32px;
+}
+
+.sf-story-logo-ufl {
+  max-height: 44px;
+}
+
+.sf-story-logo-salesforce {
+  max-height: 36px;
+}
+
+.sf-success-browser-bar {
+  flex-shrink: 0;
+  background: #2A2A3E;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sf-success-browser-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  flex-shrink: 0;
+}
+.sf-success-browser-dot:nth-child(1) { background: #FF5F57; }
+.sf-success-browser-dot:nth-child(2) { background: #FEBC2E; }
+.sf-success-browser-dot:nth-child(3) { background: #28C840; }
+
+.sf-success-browser-url {
+  font-size: 0.55em;
+  color: rgba(255,255,255,0.55);
+  margin-left: 6px;
+  font-family: monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sf-success-iframe-wrap {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+.sf-success-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 2000px;
+  border: none;
+  transform: scale(0.335);
+  transform-origin: top left;
+  pointer-events: auto;
+}
+
+.sf-success-iframe-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(26,26,46,0.9));
+  padding: 20px 16px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.sf-success-open-btn {
+  color: #24CBE5;
+  font-size: 0.62em;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid rgba(36,203,229,0.4);
+  padding: 5px 14px;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+.sf-success-open-btn:hover {
+  background: rgba(36,203,229,0.15);
+}
+
+/* ============================================================
+   CONCLUSIONS & NEXT STEPS SLIDE
+   ============================================================ */
+.reveal .sf-conclusion-slide {
+  background: #F0F5FF;
+  flex-direction: column;
+  padding: 0;
+}
+
+.sf-conclusion-body {
+  flex: 1;
+  display: flex;
+  gap: 0;
+  overflow: hidden;
+}
+
+/* ── Left: Conclusions ── */
+.sf-conclusion-left {
+  width: 58%;
+  padding: 28px 36px 24px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #ffffff;
+  border-right: 2px solid #D0DCF0;
+  overflow-y: auto;
+}
+
+.sf-conclusion-col-label {
+  font-size: 0.60em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #0070D2;
+  margin-bottom: 4px;
+}
+
+.sf-conclusion-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: #F8FAFF;
+  border-left: 4px solid #0070D2;
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px;
+}
+
+.sf-conclusion-icon {
+  width: 28px;
+  height: 28px;
+  background: #032D60;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.70em;
+  color: #24CBE5;
+  font-weight: 900;
+  margin-top: 1px;
+}
+
+.sf-conclusion-text {
+  font-size: 0.72em;
+  color: #032D60;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* ── Right: Next Steps ── */
+.sf-conclusion-right {
+  width: 42%;
+  padding: 28px 48px 24px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #F0F5FF;
+  overflow-y: auto;
+}
+
+.sf-nextstep-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #032D60;
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+.sf-nextstep-num {
+  width: 32px;
+  height: 32px;
+  background: #24CBE5;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.80em;
+  font-weight: 900;
+  color: #032D60;
+  margin-top: 1px;
+}
+
+.sf-nextstep-text {
+  font-size: 0.72em;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+/* ============================================================
+   AGENDA SLIDE
+   ============================================================ */
+.reveal .sf-agenda-slide {
+  background-color: #FEFCE8;
+  background-image:
+    linear-gradient(rgba(0,100,210,0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,100,210,0.10) 1px, transparent 1px);
+  background-size: 36px 36px;
+  color: #032D60;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+}
+
+/* Red margin line on the left — classic notebook look */
+.reveal .sf-agenda-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 96px;
+  width: 2px;
+  height: 100%;
+  background: rgba(220, 50, 50, 0.25);
+  pointer-events: none;
+}
+
+.sf-agenda-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #032D60;
+  text-align: center;
+  padding: 52px 80px 0;
+  z-index: 1;
+  flex-shrink: 0;
+  letter-spacing: 0.04em;
+}
+
+.sf-agenda-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+  padding: 20px 100px 48px 140px;
+  z-index: 1;
+  position: relative;
+}
+
+.sf-agenda-item {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.sf-agenda-num {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #032D60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8em;
+  font-weight: 900;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 4px 18px rgba(3,45,96,0.30);
+}
+
+.sf-agenda-label {
+  font-size: 1.55em;
+  font-weight: 700;
+  color: #032D60;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+.sf-agenda-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(3,45,96,0.12);
+  margin-left: 112px;
+}
+
+/* ============================================================
+   THANK YOU SLIDE
+   ============================================================ */
+.reveal .sf-thankyou {
+  background: #032D60;
+  color: var(--sf-white);
+  padding: 40px 64px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* small circle decoration */
+.reveal .sf-thankyou::before {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+  pointer-events: none;
+}
+
+/* Logo top-left, small */
+.sf-logo-sm {
+  position: absolute;
+  top: 36px;
+  left: 64px;
+  width: 72px;
+  z-index: 2;
+}
+
+.sf-thankyou-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding: 0 60px;
+}
+
+.reveal .sf-thankyou h1 {
+  font-size: 5.5em;
   font-weight: 700;
   color: var(--sf-white);
-  margin: 0 0 16px 0;
-  text-transform: none;
+  margin: 0;
+  line-height: 1;
+  text-shadow: none;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.06em;
+  width: 100%;
 }
 
 .reveal .sf-segue p {
@@ -375,4 +2157,101 @@
 /* Ensure no default reveal margins interfere */
 .reveal .slides > section {
   padding: 0;
+}
+
+/* ── Tier Detail Button ────────────────────────────────────────────────── */
+.sf-tier-detail-btn {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 7px;
+  font-size: 0.75em;
+  font-family: var(--sf-font);
+  color: #0070D2;
+  background: #E8F4FF;
+  border: 1px solid #0070D2;
+  border-radius: 10px;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background 0.15s, color 0.15s;
+}
+.sf-tier-detail-btn:hover { background: #0070D2; color: #fff; }
+
+/* ── Tier Breakdown Modal ─────────────────────────────────────────────── */
+.sf-tier-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(3,45,96,0.45);
+  align-items: center;
+  justify-content: center;
+}
+.sf-tier-modal-box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 40px rgba(3,45,96,0.28);
+  min-width: 480px;
+  max-width: 600px;
+  overflow: hidden;
+  font-family: var(--sf-font);
+}
+.sf-tier-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px 12px;
+  background: #032D60;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.sf-tier-modal-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.1em;
+  cursor: pointer;
+  padding: 0 2px;
+  opacity: 0.8;
+  transition: opacity 0.15s;
+}
+.sf-tier-modal-close:hover { opacity: 1; }
+
+/* Table inside modal */
+.sf-tier-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  margin: 0;
+}
+.sf-tier-table th {
+  background: #F0F5FF;
+  color: #032D60;
+  font-weight: 600;
+  padding: 8px 14px;
+  text-align: left;
+  border-bottom: 2px solid #C8D8F0;
+}
+.sf-tier-table td {
+  padding: 7px 14px;
+  border-bottom: 1px solid #E8EFF8;
+  color: #1a1a2e;
+}
+.sf-tier-table tr:last-child td { border-bottom: none; }
+.sf-tier-table td:nth-child(3),
+.sf-tier-table td:nth-child(4),
+.sf-tier-table th:nth-child(3),
+.sf-tier-table th:nth-child(4) { text-align: right; }
+.sf-tier-total td {
+  background: #EAF3FF;
+  font-weight: 600;
+  border-top: 2px solid #C8D8F0 !important;
+}
+.sf-tier-note {
+  margin: 0;
+  padding: 10px 16px 14px;
+  font-size: 0.78em;
+  color: #5a6a80;
+  line-height: 1.4;
 }
